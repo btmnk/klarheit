@@ -1,0 +1,60 @@
+/**
+ * This is the main configuration file for Rush.
+ * For full documentation, please see https://rushjs.io
+ */
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+
+  "rushVersion": "5.50.0",
+  "pnpmVersion": "6.12.0",
+
+  "pnpmOptions": {},
+
+  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0",
+
+  /**
+   * If you use Git as your version control system, this section has some additional
+   * optional features you can use.
+   */
+  "gitPolicy": {},
+
+  "repository": {
+    "url": "https://github.com/btmnk/klarheit",
+    "defaultBranch": "main"
+  },
+
+  /**
+   * Event hooks are customized script actions that Rush executes when specific events occur
+   */
+  "eventHooks": {
+    /**
+     * The list of shell commands to run before the Rush installation starts
+     */
+    "preRushInstall": [
+      // "common/scripts/pre-rush-install.js"
+    ],
+
+    /**
+     * The list of shell commands to run after the Rush installation finishes
+     */
+    "postRushInstall": [],
+
+    /**
+     * The list of shell commands to run before the Rush build command starts
+     */
+    "preRushBuild": [],
+
+    /**
+     * The list of shell commands to run after the Rush build command finishes
+     */
+    "postRushBuild": []
+  },
+
+  "projects": [
+    {
+      "packageName": "@klarheit/ui-button",
+      "projectFolder": "components/ui-button",
+      "shouldPublish": true
+    }
+  ]
+}
