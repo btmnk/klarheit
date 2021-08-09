@@ -1,5 +1,11 @@
 {
   "files.associations": {
-    "rush.json": "jsonc"
+    "rush.json": "jsonc",
+    "build-cache.json": "jsonc",
+    "command-line.json": "jsonc",
+    "common-versions.json": "jsonc",
+    "artifactory.json": "jsonc",
+    "experiments.json": "jsonc",
+    "version-policies.json": "jsonc"
   }
 }

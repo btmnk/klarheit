@@ -10,47 +10,26 @@
 
   "pnpmOptions": {},
 
-  "nodeSupportedVersionRange": ">=12.13.0 <13.0.0 || >=14.15.0 <15.0.0",
+  "nodeSupportedVersionRange": ">=14.15.0 <15.0.0 || >=16.6.0 <17.0.0",
 
-  /**
-   * If you use Git as your version control system, this section has some additional
-   * optional features you can use.
-   */
-  "gitPolicy": {},
+  "projectFolderMinDepth": 1,
 
   "repository": {
     "url": "https://github.com/btmnk/klarheit",
     "defaultBranch": "main"
   },
 
-  /**
-   * Event hooks are customized script actions that Rush executes when specific events occur
-   */
-  "eventHooks": {
-    /**
-     * The list of shell commands to run before the Rush installation starts
-     */
-    "preRushInstall": [
-      // "common/scripts/pre-rush-install.js"
-    ],
-
-    /**
-     * The list of shell commands to run after the Rush installation finishes
-     */
-    "postRushInstall": [],
-
-    /**
-     * The list of shell commands to run before the Rush build command starts
-     */
-    "preRushBuild": [],
-
-    /**
-     * The list of shell commands to run after the Rush build command finishes
-     */
-    "postRushBuild": []
-  },
-
   "projects": [
+    {
+      "packageName": "@klarheit/builder",
+      "projectFolder": "tools/builder",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "@klarheit/storybook",
+      "projectFolder": "storybook",
+      "shouldPublish": false
+    },
     {
       "packageName": "@klarheit/ui-button",
       "projectFolder": "components/ui-button",
