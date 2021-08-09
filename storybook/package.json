@@ -10,16 +10,17 @@
   "license": "MIT",
   "scripts": {
     "build": "echo 'Use npm run build-storybook to build the storybook!'",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 --no-manager-cache",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@klarheit/theme-default": "0.0.0",
     "@babel/core": "^7.15.0",
-    "@storybook/addon-actions": "~6.3.6",
-    "@storybook/addon-essentials": "~6.3.6",
-    "@storybook/addon-links": "~6.3.6",
-    "@storybook/react": "~6.3.6",
-    "@storybook/theming": "~6.3.6",
+    "@storybook/addon-actions": "6.3.4",
+    "@storybook/addon-essentials": "6.3.4",
+    "@storybook/addon-links": "6.3.4",
+    "@storybook/react": "6.3.4",
+    "@storybook/theming": "6.3.4",
     "@types/react": "^17.0.16",
     "babel-loader": "^8.2.2",
     "postcss": "^8.3.6",
@@ -28,7 +29,11 @@
     "typescript": "^4.3.5",
     "postcss-preset-env": "~6.7.0",
     "@storybook/addon-postcss": "~2.0.0",
-    "@storybook/builder-webpack5": "~6.3.6",
-    "@storybook/manager-webpack5": "~6.3.6"
+    "@storybook/builder-webpack5": "6.3.4",
+    "@storybook/manager-webpack5": "6.3.4",
+    "style-loader": "~3.2.1",
+    "css-loader": "~6.2.0",
+    "postcss-loader": "~6.1.1",
+    "@storybook/addons": "~6.3.7"
   }
 }

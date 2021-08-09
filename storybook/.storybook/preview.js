@@ -1,3 +1,6 @@
+import { Theme } from '@klarheit/theme-default';
+import customTheme from './theme/customTheme';
+
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
@@ -10,4 +13,16 @@ export const parameters = {
   options: {
     storySort: ['Getting Started'],
   },
+  docs: {
+    theme: customTheme,
+  },
 };
+
+export const decorators = [
+  (Story) => (
+    <>
+      <Theme />
+      <Story />
+    </>
+  ),
+];

@@ -1,15 +1,45 @@
-import React from 'react';
+import * as React from 'react';
 import cn from 'classnames';
 
 import styles from './Button.css';
 
 export interface ButtonProps {
+  /**
+   * If set the button will use an anchor tag with this href attribute
+   * If both href and onClick are set there will be an anchor tag with href and the onclick handler
+   */
   href?: string;
+
+  /**
+   * If set the button will use an onclick handler with this callback
+   * If both href and onClick are set there will be an anchor tag with href and the onclick handler
+   */
   onClick?: () => void;
+
+  /**
+   * If true the button will take the full available space
+   * @default false
+   */
   fullWidth?: boolean;
+
+  /**
+   * Renders the button in different variants using different colors and sizes
+   */
   variant?: 'primary' | 'positive' | 'negative' | 'slim';
+
+  /**
+   * If set the content of the button will be centered
+   */
   align?: 'center';
+
+  /**
+   * An addition css module className to override the styles
+   */
   className?: string;
+
+  /**
+   * Additional JSX.Element that is rendered next to the content
+   */
   icon?: JSX.Element;
 }
 

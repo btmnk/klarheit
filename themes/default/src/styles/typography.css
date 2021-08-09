@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/UbuntuMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Catamaran';
+  src: url('../assets/fonts/Catamaran-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Catamaran';
+  font-weight: 500;
+  src: url('../assets/fonts/Catamaran-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Catamaran';
+  font-weight: 200;
+  src: url('../assets/fonts/Catamaran-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Josefin';
+  src: url('../assets/fonts/JosefinSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Josefin';
+  font-weight: 500;
+  src: url('../assets/fonts/JosefinSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Josefin';
+  font-weight: 200;
+  src: url('../assets/fonts/JosefinSans-Light.ttf') format('truetype');
+}
+
+:root {
+  --baseFont: 'Catamaran';
+  --clearFont: 'Roboto';
+  --accentFont: 'Josefin';
+  --discordFont: 'Catamaran';
+  --consoleFont: 'Ubuntu';
+}

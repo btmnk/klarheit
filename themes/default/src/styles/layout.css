@@ -1,0 +1,42 @@
+html {
+  font-family: var(--baseFont);
+  color: var(--fgColor);
+}
+
+a {
+  text-decoration: none;
+  color: var(--fgColorAccent);
+
+  &:hover {
+    color: var(--fgColorPrimary);
+  }
+}
+
+input {
+  font-family: var(--baseFont);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0px 1000px var(--bgColorAccent) inset;
+  -webkit-text-fill-color: var(--fgColorAccent);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  appearance: textfield;
+}
+
+:root {
+  --gap: 20px;
+  --gapLarge: 45px;
+  --gapSmall: 12px;
+
+  --baseShadow: -4px 8px 14px rgba(0, 0, 0, 0.2), 4px 8px 14px rgba(0, 0, 0, 0.2);
+  --lightShadow: -8px 16px 18px rgba(0, 0, 0, 0.1), 8px 16px 18px rgba(0, 0, 0, 0.1);
+}

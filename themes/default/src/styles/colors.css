@@ -1,0 +1,69 @@
+:root {
+  /* BASE COLORS */
+  --primaryColor: #284879;
+  --primaryColorLighter: #4573a2;
+  --primaryColorHover: #325dbd;
+  --primaryColorActive: #788db9;
+
+  --accentColor: #e87239;
+
+  --bgColor: #2a2f3a;
+  --bgColorLighter: #383f4e;
+  --bgColorSecondary: #22262e;
+  --bgColorTertiary: #171a21;
+
+  --fgColor: #a8b1c4;
+  --fgColorAccent: #b5cdff;
+  --fgColorPrimary: #6396ff;
+
+  --borderColor: #fff;
+  --borderColorSecondary: #393f4c;
+  --borderColorTertiary: #fff;
+
+  --almostWhite: #efefef;
+  --cloudWhite: #bcddff;
+  --colorGrey: #626a80;
+  --colorGreyDim: #22232b;
+  --colorGreyDark: #16171d;
+  --almostBlack: #080910;
+
+  /* INTERACTIVE COLORS */
+
+  --bgColorInteractive: var(--primaryColor);
+  --bgColorInteractiveHover: var(--primaryColorHover);
+  --bgColorInteractiveActive: var(--primaryColorActive);
+
+  --fgColorInteractive: var(--fgColorAccent);
+  --fgColorInteractiveHover: white;
+  --fgColorInteractiveActive: white;
+
+  --bgColorInteractiveGreen: #244637;
+  --bgColorInteractiveGreenHover: #30674f;
+  --bgColorInteractiveGreenActive: #4d9073;
+
+  --fgColorInteractiveGreen: #7cbda1;
+  --fgColorInteractiveGreenHover: #7dc1a4;
+  --fgColorInteractiveGreenActive: #bbe6d4;
+
+  --bgColorInteractiveRed: #792929;
+  --bgColorInteractiveRedHover: #792929;
+  --bgColorInteractiveRedActive: #b94747;
+
+  --fgColorInteractiveRed: #e27272;
+  --fgColorInteractiveRedHover: #ef8585;
+  --fgColorInteractiveRedActive: #ffcfcf;
+
+  /* SIGNAL COLORS */
+
+  --primaryGreen: #1e5039;
+  --secondaryGreen: #8bbd96;
+
+  --primaryOrange: #ef9f3d;
+  --secondaryOrange: #e6a563;
+
+  --primaryBlue: #304873;
+  --secondaryBlue: #88a9e4;
+
+  --primaryRed: #e69d9d;
+  --primaryRedBackground: #802121;
+}
