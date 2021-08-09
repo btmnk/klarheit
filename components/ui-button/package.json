@@ -11,7 +11,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "klarb build --d dist"
+    "build": "klarb"
   },
   "dependencies": {
     "classnames": "2.3.1"

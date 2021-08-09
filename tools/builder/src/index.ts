@@ -18,7 +18,6 @@ const SOURCE_DIR = path.resolve(cwd, file);
 const PKG_JSON_CONTENTS = fs.readFileSync(path.resolve(cwd, 'package.json'), 'utf-8');
 const PKG_JSON = JSON.parse(PKG_JSON_CONTENTS);
 
-// see below for details on the options
 const inputOptions: InputOptions = {
   input: SOURCE_DIR,
   plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), postcss(), json()],
@@ -32,19 +31,16 @@ const cjsOutputOptions: OutputOptions = {
 
 const esmOutputOptions: OutputOptions = {
   file: PKG_JSON.module,
-  format: 'cjs',
+  format: 'esm',
   sourcemap: true,
 };
 
 async function build() {
-  // create a bundle
   const bundle = await rollup(inputOptions);
 
-  // or write the bundle to disk
   await bundle.write(cjsOutputOptions);
   await bundle.write(esmOutputOptions);
 
-  // closes the bundle
   await bundle.close();
 }
 
