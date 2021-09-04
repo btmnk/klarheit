@@ -24,13 +24,21 @@ export interface ButtonProps {
 
   /**
    * Renders the button in different variants using different colors and sizes
+   * @default secondary
    */
-  variant?: 'primary' | 'positive' | 'negative' | 'slim';
+  variant?: 'primary' | 'secondary' | 'positive' | 'negative';
 
   /**
-   * If set the content of the button will be centered
+   * If true the button will be rendered with less padding
+   * @default false
    */
-  align?: 'center';
+  slim?: boolean;
+
+  /**
+   * If true the content of the button will be centered
+   * @default false
+   */
+  centered?: boolean;
 
   /**
    * An addition css module className to override the styles
@@ -44,17 +52,17 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { href, onClick, children, fullWidth, variant = 'filled', align, icon, className } = props;
+  const { href, onClick, children, fullWidth, variant = 'secondary', centered, slim, icon, className } = props;
 
   const cnButton = cn(
     className,
     styles.button,
     fullWidth && styles.fullWidth,
-    align === 'center' && styles.center,
+    centered && styles.center,
+    slim && styles.slim,
     variant === 'primary' && styles.primary,
     variant === 'positive' && styles.green,
     variant === 'negative' && styles.red,
-    variant === 'slim' && styles.slim,
   );
 
   const content = (
