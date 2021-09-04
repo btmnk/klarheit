@@ -16,6 +16,12 @@
       "name": "storybook",
       "summary": "Starts storybook in development mode",
       "shellCommand": "cd storybook && yarn storybook"
+    },
+    {
+      "commandKind": "global",
+      "name": "storybook-deploy",
+      "summary": "Builds storybook and deploys it to github",
+      "shellCommand": "cd storybook && yarn storybook-deploy"
     }
     // {
     //   /**

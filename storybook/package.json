@@ -11,7 +11,8 @@
   "scripts": {
     "build": "echo 'Use npm run build-storybook to build the storybook!'",
     "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "node deploy-storybook.js"
   },
   "devDependencies": {
     "@klarheit/theme-default": "0.0.0",
@@ -34,6 +35,7 @@
     "style-loader": "~3.2.1",
     "css-loader": "~6.2.0",
     "postcss-loader": "~6.1.1",
-    "@storybook/addons": "~6.3.7"
+    "@storybook/addons": "~6.3.7",
+    "gh-pages": "~3.2.3"
   }
 }

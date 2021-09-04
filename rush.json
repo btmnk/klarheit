@@ -36,8 +36,8 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@klarheit/ui-button",
-      "projectFolder": "components/ui-button",
+      "packageName": "@klarheit/button",
+      "projectFolder": "components/button",
       "shouldPublish": true
     }
   ]
