@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("../assets/fonts/NunitoSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-weight: 500;
+  src: url("../assets/fonts/NunitoSans-Bold.ttf") format("truetype");
+}
+
+html {
+  font-family: var(--baseFont);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color: var(--fgColor);
+}
+
+:root {
+  /* FONTS */
+  --baseFont: "Nunito";
+}

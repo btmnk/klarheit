@@ -1,0 +1,71 @@
+.container {
+  --squareSize: 14px;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: calc(var(--gap) * 0.75);
+  font-size: 24px;
+
+  &.small {
+    --squareSize: 10px;
+  }
+
+  &.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    backdrop-filter: blur(6px);
+    z-index: 1;
+  }
+
+  & .square {
+    width: var(--squareSize);
+    height: var(--squareSize);
+    background: url("./assets/abstract.jpg") 50% 50%;
+    background-size: 120px;
+    border: 1px solid var(--primaryColor);
+    box-shadow: 0 0 0px transparent;
+    animation: spin-up 2.5s infinite ease-in-out;
+
+    &:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(3) {
+      animation-delay: 1s;
+    }
+  }
+}
+
+@keyframes spin-up {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 0px var(--primaryColor);
+  }
+  20% {
+    transform: rotate(225deg) scale(1.2);
+    box-shadow: 0 0 12px var(--primaryColor);
+    margin-top: -10px;
+  }
+  40% {
+    transform: rotate(225deg);
+    margin-top: 0px;
+  }
+  60% {
+    transform: rotate(225deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    box-shadow: 0 0 0px var(--primaryColor);
+  }
+}

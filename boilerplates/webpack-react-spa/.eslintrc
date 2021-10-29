@@ -1,0 +1,64 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "react"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript"
+  ],
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+
+  "env": {
+    "browser": true,
+    "node": true
+  },
+
+  "overrides": [
+    {
+      "files": ["**/*.tsx", "**/*.ts"],
+      "rules": {
+        "react/prop-types": "off",
+        "no-empty-pattern": "off",
+        "eqeqeq": ["error", "always"],
+        "no-console": 1,
+        "import/newline-after-import": ["warn", { "count": 1 }],
+        "import/order": [
+          "warn",
+          {
+            "newlines-between": "always",
+            "groups": [["builtin", "external", "internal"], ["parent", "sibling"], "index", "object"],
+            "pathGroups": [
+              {
+                "pattern": "./**/*.css",
+                "group": "index",
+                "position": "after"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    },
+    {
+      "files": ["webpack.config.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

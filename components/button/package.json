@@ -2,7 +2,7 @@
   "name": "@klarheit/button",
   "version": "0.0.0",
   "description": "Simple button component",
-  "authors": "Rico 'bitmonk' <kontakt@bitmonk.de>",
+  "author": "Rico Lafayette Maier <contact@bitmonk.de>",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
