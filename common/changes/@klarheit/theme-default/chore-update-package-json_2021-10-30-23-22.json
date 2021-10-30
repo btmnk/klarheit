@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/theme-default",
+      "comment": "Initial setup",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/theme-default"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/button",
+      "comment": "Initial setup",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/button"
+}

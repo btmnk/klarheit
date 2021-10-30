@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/cli",
+      "comment": "Initial setup",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/cli"
+}
