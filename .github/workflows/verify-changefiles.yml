@@ -1,0 +1,19 @@
+name: Build an Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify-changefiles:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Verify changefiles
+        run: node common/scripts/install-run-rush.js change -v -b origin/main
