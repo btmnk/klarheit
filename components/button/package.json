@@ -2,6 +2,7 @@
   "name": "@klarheit/button",
   "version": "0.0.0",
   "description": "Simple button component",
+  "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -9,7 +10,12 @@
   "repository": {
     "url": "https://github.com/btmnk/klarheit"
   },
-  "license": "MIT",
+  "keywords": [
+    "button",
+    "react",
+    "typescript",
+    "klarheit"
+  ],
   "scripts": {
     "build": "klarb"
   },

@@ -3,13 +3,19 @@
   "version": "0.0.0",
   "description": "The default theme for all klarheit components",
   "authors": "Rico 'bitmonk' <kontakt@bitmonk.de>",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "repository": {
     "url": "https://github.com/btmnk/klarheit"
   },
-  "license": "MIT",
+  "keywords": [
+    "theme",
+    "react",
+    "typescript",
+    "klarheit"
+  ],
   "scripts": {
     "build": "klarb"
   },

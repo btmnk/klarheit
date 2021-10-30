@@ -2,7 +2,7 @@
   "name": "@klarheit/bp-webpack-react-spa",
   "version": "0.0.0",
   "description": "A simple webpack react SPA boilerplate",
-  "license": "ISC",
+  "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
   "scripts": {
     "lint": "eslint .",
@@ -11,6 +11,16 @@
     "analyze": "webpack --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json",
     "postinstall": "node scripts/postinstall.js"
   },
+  "repository": {
+    "url": "https://github.com/btmnk/klarheit"
+  },
+  "keywords": [
+    "boilerplate",
+    "react",
+    "webpack",
+    "typescript",
+    "klarheit"
+  ],
   "browserslist": [
     "defaults",
     "not IE 11"

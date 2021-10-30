@@ -2,6 +2,16 @@
   "name": "@klarheit/cli",
   "version": "0.0.0",
   "description": "The klarheit CLI to install boilerplates",
+  "authors": "Rico 'bitmonk' <kontakt@bitmonk.de>",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/btmnk/klarheit"
+  },
+  "keywords": [
+    "cli",
+    "typescript",
+    "klarheit"
+  ],
   "exports": "./dist/index.js",
   "bin": {
     "klarheit": "dist/index.js"
@@ -14,12 +24,6 @@
     "generate:bplist": "node scripts/collectAvailableBoilerplates.cjs",
     "clean": "rimraf dist"
   },
-  "keywords": [
-    "cli",
-    "klarheit"
-  ],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "chalk": "~4.1.2",
     "commander": "~8.3.0",
