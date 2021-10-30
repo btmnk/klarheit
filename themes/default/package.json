@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/theme-default",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "The default theme for all klarheit components",
   "authors": "Rico 'bitmonk' <kontakt@bitmonk.de>",
   "license": "MIT",

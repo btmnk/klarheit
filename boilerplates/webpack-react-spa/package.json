@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/bp-webpack-react-spa",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple webpack react SPA boilerplate",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
