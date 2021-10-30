@@ -21,6 +21,19 @@
     "typescript",
     "klarheit"
   ],
+  "files": [
+    "src",
+    "public",
+    ".dockerignore",
+    ".eslintignore",
+    ".eslintrc",
+    ".prettierrc",
+    "Dockerfile",
+    "nginx.conf",
+    "postcss.config.js",
+    "tsconfig.json",
+    "webpack.config.js"
+  ],
   "browserslist": [
     "defaults",
     "not IE 11"

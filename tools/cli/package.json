@@ -17,6 +17,9 @@
     "klarheit": "dist/index.js"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "npm run generate:bplist && npm run clean && tsc && npm run copy:data && npm run make-executable",
     "watch": "tsc --watch",
