@@ -17,11 +17,15 @@
     "klarheit": "dist/index.js"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "npm run generate:bplist && npm run clean && tsc && npm run make-executable",
+    "build": "npm run generate:bplist && npm run clean && tsc && npm run copy:data && npm run make-executable",
     "watch": "tsc --watch",
     "make-executable": "chmod +x dist/index.js",
     "generate:bplist": "node scripts/collectAvailableBoilerplates.cjs",
+    "copy:data": "cpy src/data dist/data",
     "clean": "rimraf dist"
   },
   "dependencies": {
@@ -29,7 +33,8 @@
     "commander": "~8.3.0",
     "inquirer": "~8.2.0",
     "ora": "~6.0.1",
-    "tar": "~6.1.11"
+    "tar": "~6.1.11",
+    "cpy-cli": "~3.1.1"
   },
   "devDependencies": {
     "@types/inquirer": "~8.1.3",

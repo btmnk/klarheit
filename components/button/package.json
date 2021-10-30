@@ -16,6 +16,10 @@
     "typescript",
     "klarheit"
   ],
+  "files": [
+    "dist",
+    "stories"
+  ],
   "scripts": {
     "build": "klarb"
   },
