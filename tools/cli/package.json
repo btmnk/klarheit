@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The klarheit CLI to install boilerplates",
   "authors": "Rico 'bitmonk' <kontakt@bitmonk.de>",
   "license": "MIT",

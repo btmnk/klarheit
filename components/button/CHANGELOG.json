@@ -2,6 +2,18 @@
   "name": "@klarheit/button",
   "entries": [
     {
+      "version": "0.0.2",
+      "tag": "@klarheit/button_v0.0.2",
+      "date": "Sat, 30 Oct 2021 23:52:29 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Added files property to limit tarball contents"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.1",
       "tag": "@klarheit/button_v0.0.1",
       "date": "Sat, 30 Oct 2021 23:33:40 GMT",
