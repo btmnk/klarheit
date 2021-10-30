@@ -14,6 +14,8 @@
 
   "projectFolderMinDepth": 1,
 
+  "ensureConsistentVersions": true,
+
   "repository": {
     "url": "https://github.com/btmnk/klarheit",
     "defaultBranch": "main"
@@ -26,14 +28,19 @@
       "shouldPublish": false
     },
     {
-      "packageName": "@klarheit/bp-webpack-react-spa",
-      "projectFolder": "boilerplates/webpack-react-spa",
-      "shouldPublish": true
-    },
-    {
       "packageName": "@klarheit/storybook",
       "projectFolder": "storybook",
       "shouldPublish": false
+    },
+    {
+      "packageName": "@klarheit/cli",
+      "projectFolder": "tools/cli",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/bp-webpack-react-spa",
+      "projectFolder": "boilerplates/webpack-react-spa",
+      "shouldPublish": true
     },
     {
       "packageName": "@klarheit/theme-default",

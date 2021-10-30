@@ -1,0 +1,38 @@
+{
+  "name": "@klarheit/cli",
+  "version": "0.0.0",
+  "description": "The klarheit CLI to install boilerplates",
+  "exports": "./dist/index.js",
+  "bin": {
+    "klarheit": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "npm run generate:bplist && npm run clean && tsc && npm run make-executable",
+    "watch": "tsc --watch",
+    "make-executable": "chmod +x dist/index.js",
+    "generate:bplist": "node scripts/collectAvailableBoilerplates.cjs",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "cli",
+    "klarheit"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "~4.1.2",
+    "commander": "~8.3.0",
+    "inquirer": "~8.2.0",
+    "ora": "~6.0.1",
+    "tar": "~6.1.11"
+  },
+  "devDependencies": {
+    "@types/inquirer": "~8.1.3",
+    "@types/node": "~16.11.6",
+    "@types/rimraf": "~3.0.2",
+    "@types/tar": "~6.1.0",
+    "rimraf": "~3.0.2",
+    "typescript": "~4.4.4"
+  }
+}
