@@ -8,8 +8,7 @@
     "lint": "eslint .",
     "start": "webpack serve --env config=local --env development --open",
     "build": "webpack --env clean=true",
-    "analyze": "webpack --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json",
-    "postinstall": "node scripts/postinstall.js"
+    "analyze": "webpack --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
   "repository": {
     "url": "https://github.com/btmnk/klarheit"
