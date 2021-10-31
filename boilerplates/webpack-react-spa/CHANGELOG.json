@@ -2,6 +2,18 @@
   "name": "@klarheit/bp-webpack-react-spa",
   "entries": [
     {
+      "version": "0.0.3",
+      "tag": "@klarheit/bp-webpack-react-spa_v0.0.3",
+      "date": "Sun, 31 Oct 2021 00:00:55 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Removed postinstall script which resulted in an error after installing before"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.2",
       "tag": "@klarheit/bp-webpack-react-spa_v0.0.2",
       "date": "Sat, 30 Oct 2021 23:52:29 GMT",
