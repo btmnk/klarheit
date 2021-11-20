@@ -10,8 +10,8 @@
   "license": "MIT",
   "scripts": {
     "build": "echo 'Use npm run build-storybook to build the storybook!'",
-    "storybook": "start-storybook -p 6006 --no-manager-cache",
-    "build-storybook": "build-storybook",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook -s ./public",
     "deploy-storybook": "node deploy-storybook.js"
   },
   "devDependencies": {
