@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/theme-default",
+      "comment": "Moved postcss plugins to builder package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/theme-default"
+}

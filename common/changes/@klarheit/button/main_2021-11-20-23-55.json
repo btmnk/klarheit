@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/button",
+      "comment": "Moved postcss plugins to builder package",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/button"
+}
