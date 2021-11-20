@@ -5,9 +5,10 @@
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
   "scripts": {
-    "lint": "eslint .",
     "start": "webpack serve --env config=local --env development --open",
     "build": "webpack --env clean=true",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "analyze": "webpack --profile --json > dist/stats.json && webpack-bundle-analyzer dist/stats.json"
   },
   "repository": {
@@ -74,6 +75,7 @@
     "eslint": "~8.1.0",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-import": "~2.25.2",
+    "eslint-plugin-prettier": "~4.0.0",
     "eslint-plugin-react": "~7.26.1",
     "fork-ts-checker-webpack-plugin": "~6.4.0",
     "html-webpack-plugin": "~5.5.0",

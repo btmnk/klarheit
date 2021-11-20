@@ -45,6 +45,7 @@ specifiers:
   chalk: ~4.1.2
   classnames: ~2.3.1
   commander: ~8.3.0
+  cpy-cli: ~3.1.1
   css-loader: ~6.5.0
   date-fns: ~2.25.0
   eslint: ~8.1.0
@@ -129,6 +130,7 @@ dependencies:
   chalk: 4.1.2
   classnames: 2.3.1
   commander: 8.3.0
+  cpy-cli: 3.1.1
   css-loader: 6.5.0_webpack@5.61.0
   date-fns: 2.25.0
   eslint: 8.1.0
@@ -9111,6 +9113,23 @@ packages:
       tsconfig-paths: 3.11.0
     dev: false
 
+  /eslint-plugin-prettier/4.0.0_850528f9ec3c0797b9b19a94a36b5ba3:
+    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      eslint: '>=7.28.0'
+      eslint-config-prettier: '*'
+      prettier: '>=2.0.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 8.1.0
+      eslint-config-prettier: 8.3.0_eslint@8.1.0
+      prettier: 2.4.1
+      prettier-linter-helpers: 1.0.0
+    dev: false
+
   /eslint-plugin-react/7.26.1_eslint@8.1.0:
     resolution: {integrity: sha512-Lug0+NOFXeOE+ORZ5pbsh6mSKjBKXDXItUD2sQoT+5Yl0eoT82DqnXeTMfUare4QVCn9QwXbfzO/dBLjLXwVjQ==}
     engines: {node: '>=4'}
@@ -9438,6 +9457,10 @@ packages:
 
   /fast-deep-equal/3.1.3:
     resolution: {integrity: sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==}
+    dev: false
+
+  /fast-diff/1.2.0:
+    resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
     dev: false
 
   /fast-glob/2.2.7:
@@ -13787,6 +13810,13 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
+  /prettier-linter-helpers/1.0.0:
+    resolution: {integrity: sha512-GbK2cP9nraSSUF9N2XwUwqfzlAFlMNYYl+ShE/V+H8a9uNl/oUqB1w2EL54Jh0OlyRSd8RfWYJ3coVS4TROP2w==}
+    engines: {node: '>=6.0.0'}
+    dependencies:
+      fast-diff: 1.2.0
+    dev: false
+
   /prettier/2.2.1:
     resolution: {integrity: sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==}
     engines: {node: '>=10.13.0'}
@@ -17139,7 +17169,7 @@ packages:
     dev: false
 
   file:projects/bp-webpack-react-spa.tgz:
-    resolution: {integrity: sha512-FXF534VLPh0vdBwvkHK181T6tWYRPh92E+DsDmjAAkr1MehQZt4a7oDWTA2BuJcHavndchkxxjShhfczW+93pA==, tarball: file:projects/bp-webpack-react-spa.tgz}
+    resolution: {integrity: sha512-sbg1cKzCnz0kARYRjOsSjwB2JnwbmxS9yLpCwq611XGPOfY5dk2gFRrcBd/6uxFVlgGlHr6yBK7wjswsWMdr7w==, tarball: file:projects/bp-webpack-react-spa.tgz}
     name: '@rush-temp/bp-webpack-react-spa'
     version: 0.0.0
     dependencies:
@@ -17169,6 +17199,7 @@ packages:
       eslint: 8.1.0
       eslint-config-prettier: 8.3.0_eslint@8.1.0
       eslint-plugin-import: 2.25.2_eslint@8.1.0
+      eslint-plugin-prettier: 4.0.0_850528f9ec3c0797b9b19a94a36b5ba3
       eslint-plugin-react: 7.26.1_eslint@8.1.0
       fork-ts-checker-webpack-plugin: 6.4.0_8b86c7a1d76b0b986f9ab57c4db3ccd7
       html-webpack-plugin: 5.5.0_webpack@5.61.0
@@ -17282,7 +17313,7 @@ packages:
     dev: false
 
   file:projects/storybook.tgz_0f5582f84f3e8ba5b879feab9eaec9eb:
-    resolution: {integrity: sha512-EU7eYgUMrA1RNIc2XTDJQ5O04ZVYzVf5hJF5n5d0LrBf3xErWng9401VK8VT8Y5/3lV4bxFr0aiDL1JTAl9yXA==, tarball: file:projects/storybook.tgz}
+    resolution: {integrity: sha512-kYsnZv70VSo3RMP6voi1Z7T0fixr9qlMuAY+DJv0lrWN9HxCiLHCo25X00YBSn83fNCE/pwh/i3ZNYUrXNdGMQ==, tarball: file:projects/storybook.tgz}
     id: file:projects/storybook.tgz
     name: '@rush-temp/storybook'
     version: 0.0.0

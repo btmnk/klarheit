@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "import", "react"],
+  "plugins": ["@typescript-eslint", "import", "react", "prettier"],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -27,6 +27,7 @@
     {
       "files": ["**/*.tsx", "**/*.ts"],
       "rules": {
+        "prettier/prettier": ["warn"],
         "react/prop-types": "off",
         "no-empty-pattern": "off",
         "eqeqeq": ["error", "always"],
