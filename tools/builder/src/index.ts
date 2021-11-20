@@ -21,18 +21,7 @@ const PKG_JSON = JSON.parse(PKG_JSON_CONTENTS);
 
 const inputOptions: InputOptions = {
   input: SOURCE_DIR,
-  plugins: [
-    peerDepsExternal(),
-    resolve(),
-    commonjs(),
-    typescript(),
-    postcss({
-      modules: true,
-      config: false,
-    }),
-    json(),
-    terser(),
-  ],
+  plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), postcss({ modules: true }), json(), terser()],
 };
 
 const cjsOutputOptions: OutputOptions = {

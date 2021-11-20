@@ -17375,7 +17375,7 @@ packages:
     dev: false
 
   file:projects/button.tgz_f96117fe40da5a5dbe9a0488e43da0f2:
-    resolution: {integrity: sha512-zqO5cwpE+3Dfe6g0T4u+blOzd3iqbFdpejMavA19fC221SOEQxBU82a800YWS8HhZx8f7myU63bjyIENARGqWQ==, tarball: file:projects/button.tgz}
+    resolution: {integrity: sha512-pefzRtx8dCLy0+6dDJaQrdPfr2W6aLvRpxCstWrnNSBlan1y1wq1KBOF2GHGMgshlpmoTi/jFugOjmGlH3yTTg==, tarball: file:projects/button.tgz}
     id: file:projects/button.tgz
     name: '@rush-temp/button'
     version: 0.0.0
@@ -17383,6 +17383,7 @@ packages:
       '@storybook/react': 6.3.6_58700556e929bc0c272088f1fedd849c
       '@types/react': 17.0.33
       classnames: 2.3.1
+      postcss-preset-env: 6.7.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       typescript: 4.4.4
@@ -17476,13 +17477,14 @@ packages:
     dev: false
 
   file:projects/theme-default.tgz_f96117fe40da5a5dbe9a0488e43da0f2:
-    resolution: {integrity: sha512-EyRgG9DKQ297lsUc0QhkGT2GjagMBJOe2CM8u9x22fxN9d5qc5E6G0dZ4Usyj/4ZyH3dQHP2i+ENm+AuCq8mtQ==, tarball: file:projects/theme-default.tgz}
+    resolution: {integrity: sha512-GWiuqfyCpIvhw2dMW17CPYKDu5jNntkfvI97H141y6BNpir8xguOm7YzPzugPWhXtpAvT9MP0SEGy9JAaaztQA==, tarball: file:projects/theme-default.tgz}
     id: file:projects/theme-default.tgz
     name: '@rush-temp/theme-default'
     version: 0.0.0
     dependencies:
       '@storybook/react': 6.3.6_58700556e929bc0c272088f1fedd849c
       '@types/react': 17.0.33
+      postcss-preset-env: 6.7.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       typescript: 4.4.4
