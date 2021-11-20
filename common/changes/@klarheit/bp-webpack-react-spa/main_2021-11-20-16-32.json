@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/bp-webpack-react-spa",
+      "comment": "Added prettier plugin to eslint config",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/bp-webpack-react-spa"
+}
