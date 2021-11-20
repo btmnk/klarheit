@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/cli",
+      "comment": "Fixed available boilerplates collection script",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/cli"
+}

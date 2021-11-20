@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/button",
+      "comment": "Publishing rebuild with fixed build options",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/button"
+}
