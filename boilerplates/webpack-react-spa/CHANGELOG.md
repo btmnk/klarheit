@@ -1,6 +1,13 @@
 # Change Log - @klarheit/bp-webpack-react-spa
 
-This log was last generated on Sun, 31 Oct 2021 00:00:55 GMT and should not be manually modified.
+This log was last generated on Sat, 20 Nov 2021 18:00:46 GMT and should not be manually modified.
+
+## 0.0.4
+Sat, 20 Nov 2021 18:00:46 GMT
+
+### Patches
+
+- Added prettier plugin to eslint config
 
 ## 0.0.3
 Sun, 31 Oct 2021 00:00:55 GMT

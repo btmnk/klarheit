@@ -2,6 +2,18 @@
   "name": "@klarheit/button",
   "entries": [
     {
+      "version": "0.0.3",
+      "tag": "@klarheit/button_v0.0.3",
+      "date": "Sat, 20 Nov 2021 18:00:46 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Publishing rebuild with fixed build options"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.2",
       "tag": "@klarheit/button_v0.0.2",
       "date": "Sat, 30 Oct 2021 23:52:29 GMT",

@@ -2,6 +2,18 @@
   "name": "@klarheit/bp-webpack-react-spa",
   "entries": [
     {
+      "version": "0.0.4",
+      "tag": "@klarheit/bp-webpack-react-spa_v0.0.4",
+      "date": "Sat, 20 Nov 2021 18:00:46 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Added prettier plugin to eslint config"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.3",
       "tag": "@klarheit/bp-webpack-react-spa_v0.0.3",
       "date": "Sun, 31 Oct 2021 00:00:55 GMT",
