@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './styles/layout.css';
-import './styles/typography.css';
 import './styles/colors.css';
 import './styles/animation.css';
 

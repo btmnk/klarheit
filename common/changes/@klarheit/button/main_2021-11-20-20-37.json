@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/button",
+      "comment": "Use postcss config properly",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/button"
+}

@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/theme-default",
+      "comment": "Use postcss config properly and remove fonts from theme",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/theme-default"
+}
