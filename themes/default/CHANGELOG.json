@@ -2,6 +2,18 @@
   "name": "@klarheit/theme-default",
   "entries": [
     {
+      "version": "0.0.4",
+      "tag": "@klarheit/theme-default_v0.0.4",
+      "date": "Sat, 20 Nov 2021 23:55:39 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Moved postcss plugins to builder package"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.3",
       "tag": "@klarheit/theme-default_v0.0.3",
       "date": "Sat, 20 Nov 2021 20:37:59 GMT",

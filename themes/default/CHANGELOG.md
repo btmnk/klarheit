@@ -1,6 +1,13 @@
 # Change Log - @klarheit/theme-default
 
-This log was last generated on Sat, 20 Nov 2021 20:37:59 GMT and should not be manually modified.
+This log was last generated on Sat, 20 Nov 2021 23:55:39 GMT and should not be manually modified.
+
+## 0.0.4
+Sat, 20 Nov 2021 23:55:39 GMT
+
+### Patches
+
+- Moved postcss plugins to builder package
 
 ## 0.0.3
 Sat, 20 Nov 2021 20:37:59 GMT
