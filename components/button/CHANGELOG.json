@@ -2,6 +2,18 @@
   "name": "@klarheit/button",
   "entries": [
     {
+      "version": "0.0.4",
+      "tag": "@klarheit/button_v0.0.4",
+      "date": "Sat, 20 Nov 2021 20:37:59 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Use postcss config properly"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.3",
       "tag": "@klarheit/button_v0.0.3",
       "date": "Sat, 20 Nov 2021 18:00:46 GMT",

@@ -1,6 +1,13 @@
 # Change Log - @klarheit/button
 
-This log was last generated on Sat, 20 Nov 2021 18:00:46 GMT and should not be manually modified.
+This log was last generated on Sat, 20 Nov 2021 20:37:59 GMT and should not be manually modified.
+
+## 0.0.4
+Sat, 20 Nov 2021 20:37:59 GMT
+
+### Patches
+
+- Use postcss config properly
 
 ## 0.0.3
 Sat, 20 Nov 2021 18:00:46 GMT
