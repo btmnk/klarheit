@@ -27,6 +27,7 @@ const inputOptions: InputOptions = {
     commonjs(),
     typescript(),
     postcss({
+      modules: true,
       config: false,
     }),
     json(),
