@@ -21,6 +21,8 @@ const SOURCE_DIR = path.resolve(cwd, file);
 const PKG_JSON_CONTENTS = fs.readFileSync(path.resolve(cwd, 'package.json'), 'utf-8');
 const PKG_JSON = JSON.parse(PKG_JSON_CONTENTS);
 
+const directDependencies = PKG_JSON.dependencies ? Object.keys(PKG_JSON.dependencies) : [];
+
 const postcssConfig: PostCSSPluginConf = {
   modules: true,
   config: false,
@@ -39,6 +41,7 @@ const postcssConfig: PostCSSPluginConf = {
 const inputOptions: InputOptions = {
   input: SOURCE_DIR,
   plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), postcss(postcssConfig), json(), terser()],
+  external: directDependencies,
 };
 
 const cjsOutputOptions: OutputOptions = {

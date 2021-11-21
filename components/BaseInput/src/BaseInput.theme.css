@@ -1,0 +1,14 @@
+:root {
+  --kl-baseInputHeight: 42px;
+  --kl-baseInputMinHeight: 42px;
+
+  --kl-baseInputWidth: auto;
+  --kl-baseInputMinWidth: auto;
+  --kl-baseInputMaxWidth: 460px;
+
+  --kl-baseInputBorderColor: var(--borderColorSecondary);
+  --kl-baseInputBgColor: var(--bgColorTertiary);
+
+  --kl-baseInputLabelColor: var(--fgColorTertiary);
+  --kl-baseInputColor: var(--fgColor);
+}

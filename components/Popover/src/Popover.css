@@ -1,0 +1,9 @@
+.container {
+  position: absolute;
+  z-index: 2;
+
+  & .content {
+    position: relative;
+    bottom: 0;
+  }
+}

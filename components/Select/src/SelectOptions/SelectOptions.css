@@ -1,0 +1,53 @@
+.container {
+  padding: 6px 0;
+  background: var(--bgColorTertiary);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.4);
+  border: 2px solid var(--primaryColor);
+  border-radius: 6px;
+  box-sizing: border-box;
+  height: 240px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &.grid {
+    & .optionGroup {
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      & .option {
+        width: min-content;
+      }
+    }
+  }
+
+  & .optionGroup {
+    display: flex;
+    flex-direction: column;
+
+    & .option {
+      flex: 1;
+      color: var(--fgColorAccent);
+      padding: 8px 12px;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &:hover {
+        background: var(--primaryColor);
+        color: var(--fgColorAccent);
+      }
+
+      &.selectedOption {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--primaryColorBright);
+      }
+    }
+  }
+
+  & .noOptions {
+    color: var(--fgColorAccent);
+    padding: 8px 12px;
+    opacity: 0.4;
+  }
+}

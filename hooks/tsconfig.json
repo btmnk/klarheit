@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "declaration": true,
+    "strict": true,
+    "pretty": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "noUncheckedIndexedAccess": true,
+    "removeComments": false,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  }
+}

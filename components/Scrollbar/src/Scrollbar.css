@@ -1,0 +1,21 @@
+.scrollbar {
+  height: 100%;
+}
+
+:global(.simplebar-track.simplebar-hover .simplebar-scrollbar) {
+  &:before {
+    opacity: 1;
+  }
+}
+
+:global(.simplebar-scrollbar) {
+  &:before {
+    background: var(--bgColorSecondary);
+  }
+}
+
+:global(.simplebar-scrollbar.simplebar-visible) {
+  &:before {
+    opacity: 1;
+  }
+}
