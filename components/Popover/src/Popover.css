@@ -1,9 +1,11 @@
 .container {
   position: absolute;
-  z-index: 2;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
 
-  & .content {
-    position: relative;
-    bottom: 0;
+  &.open {
+    visibility: visible;
   }
 }

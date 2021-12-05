@@ -1,8 +1,8 @@
-import React, { ChangeEvent, MouseEvent, useRef, useState } from 'react';
+import * as React from 'react';
 import classNames from 'classnames';
 
 import { SelectOptions } from './SelectOptions/SelectOptions';
-import { BaseInput } from '@klarheit/baseinput';
+import { InputLayout } from '@klarheit/input-layout';
 
 import styles from './Select.css';
 
@@ -38,9 +38,9 @@ const Select: React.FC<SelectProps> = (props) => {
   const { options, multiple, label, labelIcon, searchable, grid, error, icon, className, onChange, onBlur } = props;
   const selectedOptions = options.filter((option) => option.selected);
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = React.useState(false);
 
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = React.useState('');
   const availableOptions =
     multiple || searchable ? options.filter(filterByValueOrLabelAndNotSelected(searchText)) : options;
 
@@ -55,13 +55,13 @@ const Select: React.FC<SelectProps> = (props) => {
     return collection;
   }, {} as OptionGroupDict);
 
-  const optionsContainerRef = useRef<HTMLDivElement>(null);
+  const optionsContainerRef = React.useRef<HTMLDivElement>(null);
 
-  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchText(event.target.value);
   };
 
-  const select = (value: SelectOptionValue) => {
+  const handleSelect = (value: SelectOptionValue) => {
     const newOptions = options.map((option) => ({
       ...option,
       selected: option.value === value ? true : multiple ? option.selected : false,
@@ -74,7 +74,7 @@ const Select: React.FC<SelectProps> = (props) => {
     setIsOpen(false);
   };
 
-  const handleDeselectClick = (value: string | undefined | null) => (event: MouseEvent<HTMLSpanElement>) => {
+  const handleDeselectClick = (value: string | undefined | null) => (event: React.MouseEvent<HTMLSpanElement>) => {
     event.preventDefault();
     event.stopPropagation();
     const newOptions = options.map((option) => ({
@@ -100,7 +100,7 @@ const Select: React.FC<SelectProps> = (props) => {
 
   return (
     <div className={containerClassNames}>
-      <BaseInput
+      <InputLayout
         label={label}
         labelIcon={labelIcon}
         additionalRefs={[optionsContainerRef]}
@@ -114,7 +114,7 @@ const Select: React.FC<SelectProps> = (props) => {
         popoverContent={
           <SelectOptions
             optionsByGroup={availableOptionsByGroup}
-            onSelect={select}
+            onSelect={handleSelect}
             empty={availableOptions.length === 0}
             grid={grid || false}
           />
@@ -136,7 +136,7 @@ const Select: React.FC<SelectProps> = (props) => {
         )}
 
         {(multiple || searchable) && <input value={searchText} onChange={handleSearchChange} />}
-      </BaseInput>
+      </InputLayout>
     </div>
   );
 };

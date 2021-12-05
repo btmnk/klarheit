@@ -1,16 +1,16 @@
 import classNames from 'classnames';
-import React, { CSSProperties, useRef, useState } from 'react';
+import * as React from 'react';
 
 import { useOutsideClick } from '@klarheit/use-outside-click';
 import { Popover } from '@klarheit/popover';
 
-import styles from './BaseInput.css';
+import styles from './InputLayout.css';
 
 export interface RenderPopoverContext {
-  style: CSSProperties;
+  style: React.CSSProperties;
 }
 
-export interface BaseInputProps {
+export interface InputLayoutProps {
   label?: string;
   labelIcon?: JSX.Element;
   icon?: JSX.Element;
@@ -29,7 +29,7 @@ export interface BaseInputProps {
   onBlur?: () => void;
 }
 
-const BaseInput: React.FC<BaseInputProps> = (props) => {
+const InputLayout: React.FC<InputLayoutProps> = (props) => {
   const {
     label,
     labelIcon,
@@ -41,7 +41,7 @@ const BaseInput: React.FC<BaseInputProps> = (props) => {
     error,
     rotateIconOnFocus,
     popoverContent,
-    showPopover,
+    showPopover = false,
     hoverCursor = 'pointer',
     dynamicSize = false,
     className,
@@ -50,10 +50,10 @@ const BaseInput: React.FC<BaseInputProps> = (props) => {
     children,
   } = props;
 
-  const [isFocused, setIsFocused] = useState(autoFocus);
+  const [isFocused, setIsFocused] = React.useState(autoFocus);
 
-  const containerRef = useRef<HTMLLabelElement>(null);
-  const popoverRef = useRef<HTMLDivElement>(null);
+  const containerRef = React.useRef<HTMLLabelElement>(null);
+  const popoverRef = React.useRef<HTMLDivElement>(null);
 
   const handleBlur = () => {
     if (onBlur && isFocused) {
@@ -99,8 +99,8 @@ const BaseInput: React.FC<BaseInputProps> = (props) => {
         </div>
       </label>
 
-      {showPopover && popoverContent && (
-        <Popover ref={popoverRef} anchorRef={containerRef}>
+      {popoverContent && (
+        <Popover isOpen={showPopover} anchorRef={containerRef}>
           {popoverContent}
         </Popover>
       )}
@@ -110,4 +110,4 @@ const BaseInput: React.FC<BaseInputProps> = (props) => {
   );
 };
 
-export { BaseInput };
+export { InputLayout };

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { BaseInput } from '@klarheit/baseinput';
+import { InputLayout } from '@klarheit/input-layout';
 
 interface BaseTextFieldProps {
   label?: string;
@@ -48,7 +48,7 @@ const TextField: React.FC<TextFieldProps> = (props) => {
   };
 
   return (
-    <BaseInput label={label} isFilled={isFilled} error={error} unit={unit} hoverCursor={'text'}>
+    <InputLayout label={label} isFilled={isFilled} error={error} unit={unit} hoverCursor={'text'}>
       <input
         name={name}
         value={value}
@@ -59,7 +59,7 @@ const TextField: React.FC<TextFieldProps> = (props) => {
         type={type}
         ref={inputRef}
       />
-    </BaseInput>
+    </InputLayout>
   );
 };
 

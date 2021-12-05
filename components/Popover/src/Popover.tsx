@@ -1,100 +1,105 @@
-import React, { forwardRef, RefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import classNames from 'classnames';
+
+import { usePortal } from '@klarheit/use-portal';
+import { useOutsideClick } from '@klarheit/use-outside-click';
+
+import { useBodyLock } from './hooks/useBodyLock';
 
 import styles from './Popover.css';
-
-const popoverRoot = document.getElementById('popover-root');
-const ANCHOR_UPDATE_INTERVAL = 5;
-
-interface ElementPosition {
-  left: number;
-  top: number;
-  width: number;
-  height: number;
-}
+import { VerticalOrientation } from './interface/VerticalOrientation';
+import { HorizontalOrientation } from './interface/HorizontalOrientation';
+import { usePopoverPosition } from './hooks/usePopoverPosition';
 
 export interface PopoverProps {
-  anchorRef: RefObject<HTMLElement>;
-  onMove?: () => void;
+  /**
+   * The popover target that should be used to position the popover content
+   */
+  anchorRef: React.RefObject<HTMLElement>;
+
+  /**
+   * Defines whether the popover content should be rendered or not
+   */
+  isOpen: boolean;
+
+  /**
+   * Defines the vertical orientation of the Popover content
+   * @default VerticalOrientation.BOTTOM
+   */
+  verticalOrientation?: VerticalOrientation;
+
+  /**
+   * Defines the horizontal orientation of the Popover content
+   * @default HorizontalOrientation.LEFT
+   */
+  horizontalOrientation?: HorizontalOrientation;
+
+  /**
+   * Is called when clicking outside of the popover or anchor element
+   * Should be used to set the isOpen state to false
+   */
+  onOutsideClick?: () => void;
+
+  /**
+   * A classname override for the container element
+   * The container element mimics the position of the anchor element so the content element can derive the positioning relatively
+   */
+  containerClassNames?: string;
+
+  /**
+   * A classname override for the content element
+   * The content element contains the passed child content of the Popover component
+   */
+  contentClassNames?: string;
 }
 
-const Popover = forwardRef<HTMLDivElement, React.PropsWithChildren<PopoverProps>>((props, ref) => {
-  const { anchorRef, onMove, children } = props;
+/**
+ * The Popover component is used to render content with a portal with a relative position to the provided anchorRef.
+ * To prevent unexpected behaviour when opened the body will not be scrollable until the popover is closed again.
+ *
+ * This component is useful for rendering Modals, Tooltips, Dropdowns etc. since it utilizes React Portals to render the content
+ * outside of the parents DOM element.
+ *
+ * Checkout https://reactjs.org/docs/portals.html \
+ * Also be aware of https://reactjs.org/docs/portals.html#event-bubbling-through-portals
+ */
+const Popover: React.FC<PopoverProps> = (props) => {
+  const {
+    anchorRef,
+    isOpen,
+    verticalOrientation = VerticalOrientation.BOTTOM,
+    horizontalOrientation = HorizontalOrientation.LEFT,
+    onOutsideClick,
+    children,
+  } = props;
 
-  const contentRef = useRef<HTMLDivElement>(null);
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const renderPortal = usePortal();
 
-  const [anchorPosition, setAnchorPosition] = useState<ElementPosition | undefined>(undefined);
+  useBodyLock(isOpen);
 
-  const animationRef = useRef<number>(0);
-  const intervalRef = useRef<NodeJS.Timeout>();
-
-  useEffect(() => {
-    const update = () => {
-      const currentRect = anchorRef.current?.getBoundingClientRect();
-      if (!currentRect) return;
-
-      setAnchorPosition((state) => {
-        const sameLeft = state && currentRect.left === state.left;
-        const sameTop = state && currentRect.top === state.top;
-        const sameHeight = state && currentRect.height === state.height;
-        const sameWidth = state && currentRect.width === state.width;
-
-        if (sameLeft && sameTop && sameHeight && sameWidth) {
-          return state;
-        } else {
-          if (state && onMove) {
-            onMove();
-          }
-
-          const left = currentRect.left;
-          const top = currentRect.top;
-          const width = currentRect.width;
-          const height = currentRect.height;
-
-          return { left, top, width, height };
-        }
-      });
-    };
-
-    intervalRef.current = setInterval(() => {
-      cancelAnimationFrame(animationRef.current);
-      animationRef.current = requestAnimationFrame(update);
-    }, ANCHOR_UPDATE_INTERVAL);
-
-    return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
-    };
-  }, [onMove]);
-
-  const [contentTop, setContentTop] = useState<number | string | undefined>(undefined);
-  useLayoutEffect(() => {
-    const contentRect = contentRef.current?.getBoundingClientRect();
-    if (!contentRect || !anchorPosition) return;
-
-    const bottomSpace = window.innerHeight - anchorPosition.top + anchorPosition.height;
-    const topSpace = anchorPosition.top;
-
-    const openToTheTop = topSpace > bottomSpace;
-
-    if (openToTheTop) {
-      setContentTop((contentRect.height + 6) * -1);
-    } else {
-      setContentTop('calc(100% + 6px)');
+  useOutsideClick([anchorRef, contentRef], () => {
+    if (onOutsideClick) {
+      onOutsideClick();
     }
-  }, [anchorPosition]);
+  });
 
-  if (!popoverRoot) return null;
-  return ReactDOM.createPortal(
-    <div className={styles.container} style={anchorPosition} ref={ref}>
-      <div className={styles.content} style={{ top: contentTop }} ref={contentRef}>
-        {children}
-      </div>
-    </div>,
-    popoverRoot,
+  const popoverPosition = usePopoverPosition(
+    { anchorRef, contentRef, verticalOrientation, horizontalOrientation },
+    isOpen,
   );
-});
 
-Popover.displayName = 'Popover';
+  const popoverStyle: React.CSSProperties = {
+    transform: `translate(${popoverPosition.left}px, ${popoverPosition.top}px)`,
+  };
+
+  const containerClassNames = classNames(styles.container, isOpen && styles.open);
+
+  return renderPortal(
+    <div className={containerClassNames} style={popoverStyle} ref={contentRef}>
+      {children}
+    </div>,
+  );
+};
+
 export { Popover };
