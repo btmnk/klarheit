@@ -51,6 +51,12 @@ export interface PopoverProps {
    * The content element contains the passed child content of the Popover component
    */
   contentClassNames?: string;
+
+  /**
+   * Style overrides for the popover container.
+   * The `transform` property is always set by the Popover and cannot be overridden. You can try though 😀.
+   */
+  style?: React.CSSProperties;
 }
 
 /**
@@ -63,7 +69,7 @@ export interface PopoverProps {
  * Checkout https://reactjs.org/docs/portals.html \
  * Also be aware of https://reactjs.org/docs/portals.html#event-bubbling-through-portals
  */
-const Popover: React.FC<PopoverProps> = (props) => {
+const Popover = React.forwardRef<HTMLDivElement, React.PropsWithChildren<PopoverProps>>((props, ref) => {
   const {
     anchorRef,
     isOpen,
@@ -71,9 +77,11 @@ const Popover: React.FC<PopoverProps> = (props) => {
     horizontalOrientation = HorizontalOrientation.LEFT,
     onOutsideClick,
     children,
+    style,
   } = props;
 
-  const contentRef = React.useRef<HTMLDivElement>(null);
+  const localRef = React.useRef<HTMLDivElement>(null);
+  const contentRef = (ref as React.RefObject<HTMLDivElement>) || localRef;
   const renderPortal = usePortal();
 
   useBodyLock(isOpen);
@@ -91,6 +99,7 @@ const Popover: React.FC<PopoverProps> = (props) => {
 
   const popoverStyle: React.CSSProperties = {
     transform: `translate(${popoverPosition.left}px, ${popoverPosition.top}px)`,
+    ...style,
   };
 
   const containerClassNames = classNames(styles.container, isOpen && styles.open);
@@ -100,6 +109,6 @@ const Popover: React.FC<PopoverProps> = (props) => {
       {children}
     </div>,
   );
-};
+});
 
 export { Popover };

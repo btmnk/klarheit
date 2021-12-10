@@ -1,8 +1,8 @@
-import React, { CSSProperties } from 'react';
+import React from 'react';
 import cn from 'classnames';
 
 import { OptionGroupDict, SelectOptionValue } from '../Select';
-import { Scrollbar } from '@klarheit/scrollbar';
+import { Scrollbar } from '../../../Scrollbar/src';
 
 import styles from './SelectOptions.css';
 
@@ -11,18 +11,17 @@ export interface SelectOptionsProps {
   onSelect: (value: SelectOptionValue) => void;
   empty: boolean;
   grid: boolean;
-  style?: CSSProperties;
 }
 
 const SelectOptions: React.FC<SelectOptionsProps> = (props) => {
-  const { optionsByGroup, onSelect, empty, style, grid } = props;
+  const { optionsByGroup, onSelect, empty, grid } = props;
 
   const optionGroupKeys = Object.keys(optionsByGroup);
 
   const containerClassNames = cn(styles.container, grid && styles.grid);
 
   return (
-    <div className={containerClassNames} style={style}>
+    <div className={containerClassNames}>
       <Scrollbar>
         {optionGroupKeys.map((group) => {
           const groupOptions = optionsByGroup[group];

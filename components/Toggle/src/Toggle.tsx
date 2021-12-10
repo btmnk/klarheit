@@ -1,25 +1,52 @@
 import * as React from 'react';
 import cn from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 import styles from './Toggle.css';
 
-library.add(faCheck, faTimes);
-
 export interface ToggleProps {
-  label: string;
-  name?: string;
-  value?: boolean;
-  defaultValue?: boolean;
+  /**
+   * The toggle label which is rendered on the right side next to the toggle
+   */
+  label?: string;
+
+  /**
+   * The label when the toggle value is false
+   */
   disabledLabel?: string;
+
+  /**
+   * Optional html name attribute
+   */
+  name?: string;
+
+  /**
+   * The toggle value. Use this when you intend to handle the toggle state yourself.
+   */
+  value?: boolean;
+
+  /**
+   * The initial default value. Use this when you intend to let the component handle the toggle state itself.
+   */
+  defaultValue?: boolean;
+
+  /**
+   * An optional icon element that is rendered inside the toggle knob
+   */
+  icon?: JSX.Element;
+
+  /**
+   * Called when the toggle state changes
+   */
   onChange?: (value: boolean) => void;
-  inputRef?: (instance: HTMLInputElement | null) => void;
+
+  /**
+   * A refobject for the input element
+   */
+  inputRef?: React.RefObject<HTMLInputElement> | ((instance: HTMLInputElement | null) => void);
 }
 
 const Toggle: React.FC<ToggleProps> = (props) => {
-  const { value, defaultValue, name, label, disabledLabel = label, onChange, inputRef } = props;
+  const { value, defaultValue, name, label, disabledLabel = label, icon, onChange, inputRef } = props;
 
   const [isActive, setIsActive] = React.useState(value || defaultValue);
   React.useEffect(() => {
@@ -46,9 +73,7 @@ const Toggle: React.FC<ToggleProps> = (props) => {
       />
 
       <div className={styles.toggle}>
-        <div className={styles.toggleBobble}>
-          <FontAwesomeIcon icon={isActive ? 'check' : 'times'} />
-        </div>
+        <div className={styles.toggleBobble}>{icon}</div>
       </div>
       <div className={styles.label}>{isActive ? label : disabledLabel}</div>
     </label>

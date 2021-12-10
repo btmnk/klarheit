@@ -1,16 +1,19 @@
 .container {
+  --kl-scrollbarMaxHeight: var(--kl-selectOptionsMaxHeight);
+
+  max-height: var(--kl-selectOptionsMaxHeight);
   padding: 6px 0;
   background: var(--bgColorTertiary);
-  box-shadow: 0 0 14px rgba(0, 0, 0, 0.4);
-  border: 2px solid var(--primaryColor);
-  border-radius: 6px;
-  box-sizing: border-box;
-  height: 240px;
+  box-shadow: var(--baseShadow);
+  border: 1px solid var(--primaryColorLighter);
+  margin-top: 6px;
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
 
   &.grid {
+    padding: 6px;
+
     & .optionGroup {
       flex-wrap: wrap;
       flex-direction: row;
@@ -33,14 +36,14 @@
       white-space: nowrap;
       text-overflow: ellipsis;
 
-      &:hover {
-        background: var(--primaryColor);
-        color: var(--fgColorAccent);
-      }
-
       &.selectedOption {
         background: rgba(255, 255, 255, 0.05);
         color: var(--primaryColorBright);
+      }
+
+      &:hover {
+        background: var(--primaryColor);
+        color: var(--fgColorAccent);
       }
     }
   }

@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { SelectOptions } from './SelectOptions/SelectOptions';
-import { InputLayout } from '@klarheit/input-layout';
+import { InputLayout } from '../../InputLayout/src';
 
 import styles from './Select.css';
 
@@ -146,12 +146,14 @@ const filterByValueOrLabelAndNotSelected =
   (target: SelectOption): boolean => {
     if (target.selected) return false;
 
+    const lowerCaseNeedle = needle.toLowerCase();
+
     if (target.alias) {
-      return target.alias.includes(needle);
+      return target.alias.toLowerCase().includes(lowerCaseNeedle);
     } else if (typeof target.label === 'string') {
-      return target.label.includes(needle);
+      return target.label.toLowerCase().includes(lowerCaseNeedle);
     } else if (target.value) {
-      return target.value.includes(needle);
+      return target.value.toLowerCase().includes(lowerCaseNeedle);
     }
 
     return false;

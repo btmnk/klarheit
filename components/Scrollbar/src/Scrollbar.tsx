@@ -1,8 +1,8 @@
-import React, { PropsWithChildren, RefObject, useEffect, useRef } from "react";
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
+import React, { PropsWithChildren, RefObject, useEffect, useRef } from 'react';
+import SimpleBar from 'simplebar-react';
+import 'simplebar-react/dist/simplebar.min.css';
 
-import styles from "./Scrollbar.css";
+import styles from './Scrollbar.css';
 
 export type ScrollbarTargetType = { scrollTo: (value: number) => void };
 
@@ -11,7 +11,7 @@ export interface ScrollbarProps<Target> {
 }
 
 const Scrollbar = <Target extends ScrollbarTargetType>(
-  props: PropsWithChildren<ScrollbarProps<Target>>
+  props: PropsWithChildren<ScrollbarProps<Target>>,
 ): JSX.Element => {
   const { scrollTargetRef, children } = props;
   const simpleBarScrollRef = useRef<HTMLDivElement>(null);
@@ -21,10 +21,10 @@ const Scrollbar = <Target extends ScrollbarTargetType>(
   };
 
   useEffect(() => {
-    simpleBarScrollRef.current?.addEventListener("scroll", handleScroll);
+    simpleBarScrollRef.current?.addEventListener('scroll', handleScroll);
 
     return () => {
-      simpleBarScrollRef.current?.removeEventListener("scroll", handleScroll);
+      simpleBarScrollRef.current?.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

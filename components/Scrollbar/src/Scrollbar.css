@@ -1,5 +1,6 @@
 .scrollbar {
   height: 100%;
+  max-height: var(--kl-scrollbarMaxHeight);
 }
 
 :global(.simplebar-track.simplebar-hover .simplebar-scrollbar) {

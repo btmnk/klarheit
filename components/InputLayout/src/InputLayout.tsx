@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { useOutsideClick } from '@klarheit/use-outside-click';
-import { Popover } from '@klarheit/popover';
+import { Popover } from '../../Popover/src';
 
 import styles from './InputLayout.css';
 
@@ -55,6 +55,21 @@ const InputLayout: React.FC<InputLayoutProps> = (props) => {
   const containerRef = React.useRef<HTMLLabelElement>(null);
   const popoverRef = React.useRef<HTMLDivElement>(null);
 
+  const [containerWidth, setContainerWidth] = React.useState(0);
+  React.useEffect(() => {
+    if (containerRef.current) {
+      setContainerWidth(containerRef.current.getBoundingClientRect().width);
+    }
+  }, [showPopover]);
+
+  const handleFocus = () => {
+    if (onFocus) {
+      onFocus();
+    }
+
+    setIsFocused(true);
+  };
+
   const handleBlur = () => {
     if (onBlur && isFocused) {
       onBlur();
@@ -64,14 +79,6 @@ const InputLayout: React.FC<InputLayoutProps> = (props) => {
   };
 
   useOutsideClick([containerRef, popoverRef, ...additionalRefs], handleBlur);
-
-  const handleFocus = () => {
-    if (onFocus) {
-      onFocus();
-    }
-
-    setIsFocused(true);
-  };
 
   const containerClassNames = classNames(
     styles.container,
@@ -100,7 +107,7 @@ const InputLayout: React.FC<InputLayoutProps> = (props) => {
       </label>
 
       {popoverContent && (
-        <Popover isOpen={showPopover} anchorRef={containerRef}>
+        <Popover isOpen={showPopover} anchorRef={containerRef} ref={popoverRef} style={{ width: containerWidth }}>
           {popoverContent}
         </Popover>
       )}

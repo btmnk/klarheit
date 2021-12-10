@@ -1,6 +1,8 @@
+@import './Select.theme.css';
+
 .container {
-  --baseInputHeight: auto;
-  --baseInputMinWidth: 250px;
+  --kl-baseInputHeight: auto;
+  --kl-baseInputMinWidth: 250px;
 
   & input {
     flex: 1;
@@ -40,10 +42,9 @@
 }
 
 .selected {
-  flex: 1;
   margin-bottom: -1px;
   margin-left: calc(var(--gap) * 0.5);
-  margin-right: calc(var(--gap) * 0.5);
+  color: var(--fgColorAccent);
 
   & span {
     opacity: 0.5;
