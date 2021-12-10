@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/scrollbar",
+      "comment": "Initial Release",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@klarheit/scrollbar"
+}

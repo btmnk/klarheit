@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/toggle",
+      "comment": "Initial Release",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@klarheit/toggle"
+}

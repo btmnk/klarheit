@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/textfield",
+      "comment": "Initial Release",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@klarheit/textfield"
+}

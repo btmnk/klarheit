@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/popover",
+      "comment": "Initial Release",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@klarheit/popover"
+}

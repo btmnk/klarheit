@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/bp-webpack-react-spa",
+      "comment": "Updates postcss dependencies, no effective functional changes",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/bp-webpack-react-spa"
+}

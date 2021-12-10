@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/use-outside-click",
+      "comment": "Initial Release",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@klarheit/use-outside-click"
+}
