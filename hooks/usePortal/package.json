@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/use-portal",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Create generic react portals on runtime with this hook",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",

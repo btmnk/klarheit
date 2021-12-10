@@ -2,6 +2,18 @@
   "name": "@klarheit/theme-default",
   "entries": [
     {
+      "version": "0.0.5",
+      "tag": "@klarheit/theme-default_v0.0.5",
+      "date": "Fri, 10 Dec 2021 23:51:42 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Updated to storybook v6.4.7"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.4",
       "tag": "@klarheit/theme-default_v0.0.4",
       "date": "Sat, 20 Nov 2021 23:55:39 GMT",

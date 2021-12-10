@@ -1,0 +1,25 @@
+{
+  "name": "@klarheit/input-layout",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@klarheit/input-layout_v0.1.0",
+      "date": "Fri, 10 Dec 2021 23:51:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Initial Release"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@klarheit/popover\" from `0.0.0` to `0.1.0`"
+          },
+          {
+            "comment": "Updating dependency \"@klarheit/use-outside-click\" from `0.0.0` to `0.1.0`"
+          }
+        ]
+      }
+    }
+  ]
+}

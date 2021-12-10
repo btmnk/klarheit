@@ -1,6 +1,13 @@
 # Change Log - @klarheit/theme-default
 
-This log was last generated on Sat, 20 Nov 2021 23:55:39 GMT and should not be manually modified.
+This log was last generated on Fri, 10 Dec 2021 23:51:42 GMT and should not be manually modified.
+
+## 0.0.5
+Fri, 10 Dec 2021 23:51:42 GMT
+
+### Patches
+
+- Updated to storybook v6.4.7
 
 ## 0.0.4
 Sat, 20 Nov 2021 23:55:39 GMT

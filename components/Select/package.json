@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/select",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Select input component",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
@@ -26,8 +26,8 @@
     "build": "klarb"
   },
   "dependencies": {
-    "@klarheit/input-layout": "0.0.0",
-    "@klarheit/scrollbar": "0.0.0",
+    "@klarheit/input-layout": "0.1.0",
+    "@klarheit/scrollbar": "0.1.0",
     "classnames": "~2.3.1"
   },
   "devDependencies": {

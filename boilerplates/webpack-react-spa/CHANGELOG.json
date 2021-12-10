@@ -2,6 +2,18 @@
   "name": "@klarheit/bp-webpack-react-spa",
   "entries": [
     {
+      "version": "0.0.5",
+      "tag": "@klarheit/bp-webpack-react-spa_v0.0.5",
+      "date": "Fri, 10 Dec 2021 23:51:42 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Updates postcss dependencies, no effective functional changes"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.4",
       "tag": "@klarheit/bp-webpack-react-spa_v0.0.4",
       "date": "Sat, 20 Nov 2021 18:00:46 GMT",

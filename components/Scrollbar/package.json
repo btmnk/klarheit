@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/scrollbar",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Scrollbar replacement powered by simplebar-react",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",

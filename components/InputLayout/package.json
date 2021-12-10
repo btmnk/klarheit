@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/input-layout",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Layout component for input components",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
@@ -24,8 +24,8 @@
     "build": "klarb"
   },
   "dependencies": {
-    "@klarheit/popover": "0.0.0",
-    "@klarheit/use-outside-click": "0.0.0",
+    "@klarheit/popover": "0.1.0",
+    "@klarheit/use-outside-click": "0.1.0",
     "classnames": "~2.3.1"
   },
   "devDependencies": {

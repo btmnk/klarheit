@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/use-outside-click",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Listen for clicks outside of a dom element with this hook",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",

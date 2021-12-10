@@ -1,0 +1,17 @@
+{
+  "name": "@klarheit/scrollbar",
+  "entries": [
+    {
+      "version": "0.1.0",
+      "tag": "@klarheit/scrollbar_v0.1.0",
+      "date": "Fri, 10 Dec 2021 23:51:42 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Initial Release"
+          }
+        ]
+      }
+    }
+  ]
+}
