@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { useOutsideClick } from '@klarheit/use-outside-click';
-import { Popover } from '../../Popover/src';
+import { Popover } from '@klarheit/popover';
 
 import styles from './InputLayout.css';
 

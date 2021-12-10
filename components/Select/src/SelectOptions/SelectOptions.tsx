@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 import { OptionGroupDict, SelectOptionValue } from '../Select';
-import { Scrollbar } from '../../../Scrollbar/src';
+import { Scrollbar } from '@klarheit/scrollbar';
 
 import styles from './SelectOptions.css';
 

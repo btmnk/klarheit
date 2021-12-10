@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { SelectOptions } from './SelectOptions/SelectOptions';
-import { InputLayout } from '../../InputLayout/src';
+import { InputLayout } from '@klarheit/input-layout';
 
 import styles from './Select.css';
 

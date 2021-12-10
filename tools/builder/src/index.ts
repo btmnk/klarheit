@@ -25,11 +25,12 @@ const directDependencies = PKG_JSON.dependencies ? Object.keys(PKG_JSON.dependen
 
 const postcssConfig: PostCSSPluginConf = {
   modules: true,
+  minimize: true,
   config: false,
   plugins: [
     postcssImport(),
     postcssPresetEnv({
-      stage: 3,
+      stage: 2,
       features: {
         'nesting-rules': true,
         'custom-media-queries': true,
