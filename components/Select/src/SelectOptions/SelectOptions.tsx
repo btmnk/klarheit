@@ -7,6 +7,7 @@ import { Scrollbar } from '@klarheit/scrollbar';
 import styles from './SelectOptions.css';
 
 export interface SelectOptionsProps {
+  isOpen: boolean;
   optionsByGroup: OptionGroupDict;
   onSelect: (value: SelectOptionValue) => void;
   empty: boolean;
@@ -14,11 +15,15 @@ export interface SelectOptionsProps {
 }
 
 const SelectOptions: React.FC<SelectOptionsProps> = (props) => {
-  const { optionsByGroup, onSelect, empty, grid } = props;
+  const { isOpen, optionsByGroup, onSelect, empty, grid } = props;
 
   const optionGroupKeys = Object.keys(optionsByGroup);
 
   const containerClassNames = cn(styles.container, grid && styles.grid);
+
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div className={containerClassNames}>

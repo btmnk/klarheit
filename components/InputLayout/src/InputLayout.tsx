@@ -16,6 +16,7 @@ export interface InputLayoutProps {
   icon?: JSX.Element;
   unit?: string;
   isFilled?: boolean;
+  isFocused?: boolean;
   autoFocus?: boolean;
   additionalRefs?: Array<React.RefObject<HTMLElement>>;
   error?: string;
@@ -37,6 +38,7 @@ const InputLayout: React.FC<InputLayoutProps> = (props) => {
     unit,
     isFilled,
     additionalRefs = [],
+    isFocused: isFocusedProp,
     autoFocus,
     error,
     rotateIconOnFocus,
@@ -51,6 +53,7 @@ const InputLayout: React.FC<InputLayoutProps> = (props) => {
   } = props;
 
   const [isFocused, setIsFocused] = React.useState(autoFocus);
+  React.useEffect(() => setIsFocused(isFocusedProp), [isFocusedProp]);
 
   const containerRef = React.useRef<HTMLLabelElement>(null);
   const popoverRef = React.useRef<HTMLDivElement>(null);

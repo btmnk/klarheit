@@ -1,22 +1,52 @@
-.scrollbar {
+@import './Scrollbar.theme.css';
+
+.container {
+  position: relative;
   height: 100%;
   max-height: var(--kl-scrollbarMaxHeight);
-}
 
-:global(.simplebar-track.simplebar-hover .simplebar-scrollbar) {
-  &:before {
-    opacity: 1;
+  &.visible,
+  &:hover {
+    & .scrollbarTrack {
+      opacity: 1;
+      visibility: visible;
+    }
   }
-}
 
-:global(.simplebar-scrollbar) {
-  &:before {
-    background: var(--bgColorSecondary);
+  & .content {
+    height: 100%;
+    max-height: var(--kl-scrollbarMaxHeight);
+    box-sizing: border-box;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
-}
 
-:global(.simplebar-scrollbar.simplebar-visible) {
-  &:before {
-    opacity: 1;
+  & .scrollbarTrack {
+    position: absolute;
+    user-select: none;
+    top: var(--kl-scrollbarTrackTopSpace);
+    bottom: var(--kl-scrollbarTrackBottomSpace);
+    right: var(--kl-scrollbarTrackRightSpace);
+    width: var(--kl-scrollbarTrackWidth);
+    padding: var(--kl-scrollbarTrackPadding);
+    border-radius: var(--kl-scrollbarTrackBorderRadius);
+    background: #1b1e25;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 320ms, visibility 320ms;
+
+    & .scrollbarThumb {
+      position: absolute;
+      pointer-events: normal;
+      width: var(--kl-scrollbarTrackThumbWidth);
+      height: 50%;
+      border-radius: var(--kl-scrollbarTrackBorderRadius);
+      background: #32353b;
+    }
   }
 }

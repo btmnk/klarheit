@@ -72,6 +72,7 @@ const Select: React.FC<SelectProps> = (props) => {
       setSearchText('');
     }
     setIsOpen(false);
+    handleBlur();
   };
 
   const handleDeselectClick = (value: string | undefined | null) => (event: React.MouseEvent<HTMLSpanElement>) => {
@@ -107,12 +108,14 @@ const Select: React.FC<SelectProps> = (props) => {
         onBlur={handleBlur}
         onFocus={handleFocus}
         error={error}
+        isFocused={isOpen}
         isFilled={selectedOptions.length > 0}
         icon={icon}
         rotateIconOnFocus={true}
         showPopover={isOpen}
         popoverContent={
           <SelectOptions
+            isOpen={isOpen}
             optionsByGroup={availableOptionsByGroup}
             onSelect={handleSelect}
             empty={availableOptions.length === 0}
