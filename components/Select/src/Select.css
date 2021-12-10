@@ -1,0 +1,52 @@
+@import './Select.theme.css';
+
+.container {
+  --kl-baseInputHeight: auto;
+  --kl-baseInputMinWidth: 250px;
+
+  & input {
+    flex: 1;
+    cursor: pointer;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--gapSmall) * 0.5);
+  padding: 6px;
+
+  & .tag {
+    display: flex;
+    background: var(--bgColorSecondary);
+
+    & .label {
+      display: flex;
+      align-items: center;
+      padding: 5px 8px;
+    }
+
+    & .deselect {
+      display: flex;
+      align-items: center;
+      font-size: 0.9em;
+      padding: 3px 8px 2px;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--primaryRed);
+        background: var(--primaryRedBackground);
+      }
+    }
+  }
+}
+
+.selected {
+  margin-bottom: -1px;
+  margin-left: calc(var(--gap) * 0.5);
+  color: var(--fgColorAccent);
+
+  & span {
+    opacity: 0.5;
+  }
+}

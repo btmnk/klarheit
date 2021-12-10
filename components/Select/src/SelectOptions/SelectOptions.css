@@ -1,0 +1,56 @@
+.container {
+  --kl-scrollbarMaxHeight: var(--kl-selectOptionsMaxHeight);
+
+  max-height: var(--kl-selectOptionsMaxHeight);
+  padding: 6px 0;
+  background: var(--bgColorTertiary);
+  box-shadow: var(--baseShadow);
+  border: 1px solid var(--primaryColorLighter);
+  margin-top: 6px;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &.grid {
+    padding: 6px;
+
+    & .optionGroup {
+      flex-wrap: wrap;
+      flex-direction: row;
+
+      & .option {
+        width: min-content;
+      }
+    }
+  }
+
+  & .optionGroup {
+    display: flex;
+    flex-direction: column;
+
+    & .option {
+      flex: 1;
+      color: var(--fgColorAccent);
+      padding: 8px 12px;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &.selectedOption {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--primaryColorBright);
+      }
+
+      &:hover {
+        background: var(--primaryColor);
+        color: var(--fgColorAccent);
+      }
+    }
+  }
+
+  & .noOptions {
+    color: var(--fgColorAccent);
+    padding: 8px 12px;
+    opacity: 0.4;
+  }
+}

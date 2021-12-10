@@ -4,6 +4,7 @@ module.exports = {
   },
   stories: [
     '../../components/**/stories/*.stories.@(js|jsx|ts|tsx|mdx)',
+    '../../hooks/**/stories/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../stories/**/*.stories.@(js|jsx|ts|tsx|mdx)',
   ],
   addons: [
@@ -18,6 +19,7 @@ module.exports = {
       },
     },
   ],
+  staticDirs: ['../public'],
   webpackFinal: async (config, { configType }) => {
     config.module.rules = config.module.rules.filter((rule) => {
       if (rule.test) {

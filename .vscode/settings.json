@@ -6,6 +6,7 @@
     "common-versions.json": "jsonc",
     "artifactory.json": "jsonc",
     "experiments.json": "jsonc",
-    "version-policies.json": "jsonc"
+    "version-policies.json": "jsonc",
+    "*.css": "postcss"
   }
 }

@@ -49,7 +49,47 @@
     },
     {
       "packageName": "@klarheit/button",
-      "projectFolder": "components/button",
+      "projectFolder": "components/Button",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/popover",
+      "projectFolder": "components/Popover",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/input-layout",
+      "projectFolder": "components/InputLayout",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/textfield",
+      "projectFolder": "components/TextField",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/select",
+      "projectFolder": "components/Select",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/toggle",
+      "projectFolder": "components/Toggle",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/scrollbar",
+      "projectFolder": "components/Scrollbar",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/use-outside-click",
+      "projectFolder": "hooks/useOutsideClick",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@klarheit/use-portal",
+      "projectFolder": "hooks/usePortal",
       "shouldPublish": true
     }
   ]

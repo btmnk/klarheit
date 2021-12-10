@@ -1,7 +1,7 @@
 {
-  "name": "@klarheit/button",
-  "version": "0.0.5",
-  "description": "Simple button component",
+  "name": "@klarheit/scrollbar",
+  "version": "0.0.0",
+  "description": "Scrollbar replacement powered by simplebar-react",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
   "main": "dist/index.js",
@@ -11,7 +11,8 @@
     "url": "https://github.com/btmnk/klarheit"
   },
   "keywords": [
-    "button",
+    "scrollbar",
+    "simplebar",
     "react",
     "typescript",
     "klarheit"
@@ -32,7 +33,7 @@
     "react": "~17.0.2",
     "react-dom": "~17.0.2",
     "typescript": "~4.4.4",
-    "@storybook/react": "~6.3.6"
+    "@storybook/react": "~6.4.7"
   },
   "peerDependencies": {
     "react": ">=16.8.0",

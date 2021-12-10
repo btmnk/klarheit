@@ -1,0 +1,15 @@
+:root {
+  --kl-scrollbarTrackBackground: #1b1e25;
+  --kl-scrollbarTrackThumbBackground: #32353b;
+
+  --kl-scrollbarTrackWidth: 10px;
+  --kl-scrollbarTrackThumbWidth: 10px;
+
+  --kl-scrollbarTrackPadding: 2px;
+
+  --kl-scrollbarTrackTopSpace: 2px;
+  --kl-scrollbarTrackBottomSpace: 2px;
+  --kl-scrollbarTrackRightSpace: 2px;
+
+  --kl-scrollbarTrackBorderRadius: 2px;
+}

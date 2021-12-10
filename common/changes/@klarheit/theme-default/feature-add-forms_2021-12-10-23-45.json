@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/theme-default",
+      "comment": "Updated to storybook v6.4.7",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/theme-default"
+}

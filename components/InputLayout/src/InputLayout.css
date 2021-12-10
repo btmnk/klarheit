@@ -1,0 +1,150 @@
+@import './InputLayout.theme.css';
+
+.container {
+  position: relative;
+  width: var(--kl-baseInputWidth);
+  min-width: var(--kl-baseInputMinWidth);
+  max-width: var(--kl-baseInputMaxWidth);
+
+  &:hover {
+    & label {
+      & .inputContainer {
+        border-color: var(--primaryColor);
+      }
+    }
+  }
+
+  &.filled {
+    & label {
+      & .inputContainer {
+        border-color: var(--primaryColor);
+      }
+    }
+  }
+
+  &.focus {
+    & label {
+      & .inputContainer {
+        border-color: var(--primaryColorLighter);
+      }
+    }
+
+    &.rotateIcon {
+      & .icon {
+        transform: rotateX(180deg);
+      }
+    }
+  }
+
+  &.hasError {
+    & label {
+      & .inputContainer {
+        border-color: var(--primaryRedBackground);
+      }
+    }
+
+    & .error {
+      visibility: visible;
+      height: auto;
+    }
+  }
+
+  &.dynamic {
+    height: auto;
+    min-width: var(--kl-baseInputMinWidth);
+    max-width: 100%;
+
+    & .inputContainer {
+      height: auto;
+    }
+  }
+
+  & label {
+    display: flex;
+    flex-direction: column;
+
+    & .label {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 240ms;
+      white-space: nowrap;
+      margin-bottom: 8px;
+      color: var(---kl-baseInputLabelColor);
+      font-weight: bold;
+    }
+
+    & .inputContainer {
+      display: flex;
+      box-sizing: border-box;
+      border: 1px solid var(--kl-baseInputBorderColor);
+      height: var(--kl-baseInputHeight);
+      min-height: var(--kl-baseInputMinHeight);
+      transition: all 180ms;
+      background: var(--kl-baseInputBgColor);
+
+      & .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: var(--kl-baseInputColor);
+
+        & input,
+        & textarea {
+          font-size: 14px;
+          color: var(--kl-baseInputColor);
+          padding: 0 var(--gapSmall);
+          width: 100%;
+          background: transparent;
+          border: none;
+          outline: none;
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px var(--kl-baseInputBgColor) inset !important;
+          }
+          &:-webkit-autofill {
+            -webkit-text-fill-color: var(--fgColorAccent) !important;
+          }
+        }
+
+        & textarea {
+          resize: vertical;
+          width: 100%;
+          padding: var(--gapSmall);
+        }
+      }
+
+      & .unit {
+        padding: 0 var(--gapSmall) 0 0;
+        display: flex;
+        align-items: center;
+        opacity: 0.6;
+      }
+
+      & .icon {
+        padding: 0 var(--gapSmall);
+        display: flex;
+        align-items: center;
+        transition: all 240ms;
+      }
+    }
+  }
+
+  & .error {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-bottom: 2px;
+    color: var(--primaryRed);
+    background: var(--primaryRedBackground);
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: height 240ms;
+  }
+}

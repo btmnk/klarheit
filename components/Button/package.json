@@ -1,0 +1,41 @@
+{
+  "name": "@klarheit/button",
+  "version": "0.0.5",
+  "description": "Simple button component",
+  "license": "MIT",
+  "author": "Rico Lafayette Maier <contact@bitmonk.de>",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/btmnk/klarheit"
+  },
+  "keywords": [
+    "button",
+    "react",
+    "typescript",
+    "klarheit"
+  ],
+  "files": [
+    "dist",
+    "stories"
+  ],
+  "scripts": {
+    "build": "klarb"
+  },
+  "dependencies": {
+    "classnames": "~2.3.1"
+  },
+  "devDependencies": {
+    "@klarheit/builder": "~0.1.0",
+    "@types/react": "~17.0.33",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "typescript": "~4.4.4",
+    "@storybook/react": "~6.4.7"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  }
+}

@@ -1,0 +1,57 @@
+.container {
+  --toggleHeight: 20px;
+  --togglePadding: 4px;
+
+  display: inline-flex;
+  height: var(--baseInputHeight);
+  align-items: center;
+  cursor: pointer;
+
+  & input {
+    display: none;
+  }
+
+  & .label {
+    flex: 1;
+    margin-left: var(--gap);
+    font-size: 14px;
+  }
+
+  & .toggle {
+    position: relative;
+    height: var(--toggleHeight);
+    width: calc(var(--toggleHeight) * 2);
+    border-radius: var(--toggleHeight);
+    padding: var(--togglePadding);
+    background: var(--borderColorSecondary);
+
+    & .toggleBobble {
+      width: 50%;
+      height: 100%;
+      border-radius: 100%;
+      background: var(--fgColor);
+      transition: transform 220ms;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7em;
+      color: var(--bgColorAccentInactive);
+    }
+  }
+
+  &.active {
+    & .label {
+      color: var(--fgColorInteractiveGreenActive);
+    }
+
+    & .toggle {
+      background: var(--bgColorInteractiveGreenHover);
+
+      & .toggleBobble {
+        background: var(--fgColorInteractiveGreenActive);
+        transform: translate(var(--toggleHeight), 0);
+        color: var(--bgColorInteractiveGreenHover);
+      }
+    }
+  }
+}
