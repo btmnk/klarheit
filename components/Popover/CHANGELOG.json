@@ -2,6 +2,18 @@
   "name": "@klarheit/popover",
   "entries": [
     {
+      "version": "0.1.1",
+      "tag": "@klarheit/popover_v0.1.1",
+      "date": "Sat, 11 Dec 2021 20:59:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Adds exports for the orientation interfaces"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.0",
       "tag": "@klarheit/popover_v0.1.0",
       "date": "Fri, 10 Dec 2021 23:51:42 GMT",
