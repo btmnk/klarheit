@@ -20,70 +20,103 @@
     margin-bottom: -1px;
   }
 
-  &:hover {
-    background: var(--bgColorInteractive);
-    color: var(--fgColorInteractive);
-  }
-  &:active {
-    background: var(--bgColorInteractiveHover);
-    color: var(--fgColorInteractiveHover);
-    transition: all 0ms;
-  }
-
-  &.slim {
-    height: 30px;
-  }
-
   &.center {
     justify-content: center;
+  }
+
+  &.fullWidth {
+    width: calc(100% - (var(--gap) * 2) - 4px);
   }
 
   &.primary {
     background: var(--bgColorInteractive);
     color: var(--fgColorInteractive);
-
-    &:hover {
-      background: var(--bgColorInteractiveHover);
-      color: var(--fgColorInteractiveHover);
-    }
-    &:active {
-      background: var(--bgColorInteractiveActive);
-      color: var(--fgColorInteractiveActive);
-      transition: all 0ms;
-    }
   }
 
-  &.green {
+  &.primary.green {
     background: var(--bgColorInteractiveGreen);
     color: var(--fgColorInteractiveGreen);
-
-    &:hover {
-      background: var(--bgColorInteractiveGreenHover);
-      color: var(--fgColorInteractiveGreenHover);
-    }
-    &:active {
-      background: var(--bgColorInteractiveGreenActive);
-      color: var(--fgColorInteractiveGreenActive);
-      transition: all 0ms;
-    }
   }
 
-  &.red {
+  &.primary.red {
     background: var(--bgColorInteractiveRed);
     color: var(--fgColorInteractiveRed);
-
-    &:hover {
-      background: var(--bgColorInteractiveRedHover);
-      color: var(--fgColorInteractiveRedHover);
-    }
-    &:active {
-      background: var(--bgColorInteractiveRedActive);
-      color: var(--fgColorInteractiveRedActive);
-      transition: all 0ms;
-    }
   }
 
-  &.fullWidth {
-    width: calc(100% - (var(--gap) * 2) - 4px);
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:not(.disabled) {
+    &:hover {
+      background: var(--bgColorInteractive);
+      color: var(--fgColorInteractive);
+    }
+    &:active {
+      background: var(--bgColorInteractiveHover);
+      color: var(--fgColorInteractiveHover);
+      transition: all 0ms;
+    }
+
+    &.primary {
+      &:hover {
+        background: var(--bgColorInteractiveHover);
+        color: var(--fgColorInteractiveHover);
+      }
+      &:active {
+        background: var(--bgColorInteractiveActive);
+        color: var(--fgColorInteractiveActive);
+        transition: all 0ms;
+      }
+    }
+
+    &.green {
+      &:hover {
+        background: var(--bgColorInteractiveGreen);
+        color: var(--fgColorInteractiveGreen);
+      }
+      &:active {
+        background: var(--bgColorInteractiveGreenHover);
+        color: var(--fgColorInteractiveGreenHover);
+        transition: all 0ms;
+      }
+    }
+
+    &.red {
+      &:hover {
+        background: var(--bgColorInteractiveRed);
+        color: var(--fgColorInteractiveRed);
+      }
+      &:active {
+        background: var(--bgColorInteractiveRedHover);
+        color: var(--fgColorInteractiveRedHover);
+        transition: all 0ms;
+      }
+    }
+
+    &.primary.green {
+      &:hover {
+        background: var(--bgColorInteractiveGreenHover);
+        color: var(--fgColorInteractiveGreenHover);
+      }
+      &:active {
+        background: var(--bgColorInteractiveGreenActive);
+        color: var(--fgColorInteractiveGreenActive);
+        transition: all 0ms;
+      }
+    }
+
+    &.primary.red {
+      &:hover {
+        background: var(--bgColorInteractiveRedHover);
+        color: var(--fgColorInteractiveRedHover);
+      }
+      &:active {
+        background: var(--bgColorInteractiveRedActive);
+        color: var(--fgColorInteractiveRedActive);
+        transition: all 0ms;
+      }
+    }
   }
 }

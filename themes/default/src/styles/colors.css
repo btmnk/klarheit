@@ -3,7 +3,7 @@
   --primaryColor: #284879;
   --primaryColorLighter: #4573a2;
   --primaryColorHover: #325dbd;
-  --primaryColorActive: #788db9;
+  --primaryColorActive: #4671d1;
 
   --accentColor: #e87239;
 
@@ -45,11 +45,11 @@
   --fgColorInteractiveGreenHover: #7dc1a4;
   --fgColorInteractiveGreenActive: #bbe6d4;
 
-  --bgColorInteractiveRed: #792929;
+  --bgColorInteractiveRed: #5c2a2a;
   --bgColorInteractiveRedHover: #792929;
   --bgColorInteractiveRedActive: #b94747;
 
-  --fgColorInteractiveRed: #e27272;
+  --fgColorInteractiveRed: #cd6a6a;
   --fgColorInteractiveRedHover: #ef8585;
   --fgColorInteractiveRedActive: #ffcfcf;
 

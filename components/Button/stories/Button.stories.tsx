@@ -32,3 +32,8 @@ WithIcon.args = {
     </div>
   ),
 };
+
+export const Disabled: ComponentStory<typeof Button> = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
