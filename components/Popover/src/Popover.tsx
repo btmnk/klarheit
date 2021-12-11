@@ -4,12 +4,12 @@ import classNames from 'classnames';
 import { usePortal } from '@klarheit/use-portal';
 import { useOutsideClick } from '@klarheit/use-outside-click';
 
-import { useBodyLock } from './hooks/useBodyLock';
-
-import styles from './Popover.css';
 import { VerticalOrientation } from './interface/VerticalOrientation';
 import { HorizontalOrientation } from './interface/HorizontalOrientation';
 import { usePopoverPosition } from './hooks/usePopoverPosition';
+import { useBodyLock } from './hooks/useBodyLock';
+
+import styles from './Popover.css';
 
 export interface PopoverProps {
   /**
