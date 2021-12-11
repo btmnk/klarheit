@@ -1,0 +1,19 @@
+name: Build an Test
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update and build
+        run: |
+          node common/scripts/install-run-rush.js update
+          node common/scripts/install-run-rush.js build
