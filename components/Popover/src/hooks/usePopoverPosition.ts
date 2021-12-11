@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { HorizontalOrientation } from '../interface/HorizontalOrientation';
 import { VerticalOrientation } from '../interface/VerticalOrientation';
 
@@ -19,7 +19,7 @@ export const usePopoverPosition = (options: UsePopoverPositionOptions, isOpen: b
 
   const [result, setResult] = useState<UsePopoverPositionResult>({ left: 0, top: 0 });
 
-  useLayoutEffect(() => {
+  const handleReposition = React.useCallback(() => {
     const anchorRect = anchorRef.current?.getBoundingClientRect();
     const contentRect = contentRef.current?.getBoundingClientRect();
 
@@ -28,7 +28,19 @@ export const usePopoverPosition = (options: UsePopoverPositionOptions, isOpen: b
       const left = calculateLeftPosition(horizontalOrientation, anchorRect, contentRect);
       setResult({ left, top });
     }
-  }, [isOpen, verticalOrientation, horizontalOrientation]);
+  }, [verticalOrientation, horizontalOrientation]);
+
+  useLayoutEffect(() => {
+    handleReposition();
+  }, [isOpen, handleReposition]);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleReposition);
+
+    return () => {
+      window.removeEventListener('resize', handleReposition);
+    };
+  }, [handleReposition]);
 
   return result;
 };
