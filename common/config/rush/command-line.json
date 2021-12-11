@@ -19,9 +19,9 @@
     },
     {
       "commandKind": "global",
-      "name": "storybook-deploy",
+      "name": "deploy-storybook",
       "summary": "Builds storybook and deploys it to github",
-      "shellCommand": "cd storybook && yarn storybook-deploy"
+      "shellCommand": "cd storybook && yarn deploy-storybook"
     }
     // {
     //   /**

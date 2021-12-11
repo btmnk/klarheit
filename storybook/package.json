@@ -12,7 +12,7 @@
     "build": "echo 'Use npm run build-storybook to build the storybook!'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy-storybook": "node deploy-storybook.js"
+    "deploy-storybook": "npm run build-storybook && node deploy-storybook.js"
   },
   "devDependencies": {
     "@klarheit/theme-default": "~0.0.5",
