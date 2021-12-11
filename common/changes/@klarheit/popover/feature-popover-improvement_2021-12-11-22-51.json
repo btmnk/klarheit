@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/popover",
+      "comment": "Make sure body lock padding is only applied if scrollbar was actually there",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/popover"
+}
