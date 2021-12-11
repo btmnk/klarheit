@@ -23,16 +23,20 @@ export interface ButtonProps {
   fullWidth?: boolean;
 
   /**
-   * Renders the button in different variants using different colors and sizes
-   * @default secondary
-   */
-  variant?: 'primary' | 'secondary' | 'positive' | 'negative';
-
-  /**
-   * If true the button will be rendered with less padding
+   * Renders the button with the accent colors
    * @default false
    */
-  slim?: boolean;
+  primary?: boolean;
+
+  /**
+   * Renders the button in different variants using different colors
+   *
+   * Positive: green accent colors indicating a positive confirmation action
+   * Negative: red accent colors indicating a negative cancel or delete action
+   *
+   * @default default
+   */
+  variant?: 'default' | 'positive' | 'negative';
 
   /**
    * If true the content of the button will be centered
@@ -41,7 +45,13 @@ export interface ButtonProps {
   centered?: boolean;
 
   /**
-   * An addition css module className to override the styles
+   * If true the buttons functionality will be disabled with a fitting appearance
+   * @default false
+   */
+  disabled?: boolean;
+
+  /**
+   * Additional css module className to override the styles
    */
   className?: string;
 
@@ -52,18 +62,35 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
-  const { href, onClick, children, fullWidth, variant = 'secondary', centered, slim, icon, className } = props;
+  const {
+    href,
+    onClick,
+    children,
+    fullWidth,
+    variant = 'default',
+    centered,
+    primary,
+    disabled,
+    icon,
+    className,
+  } = props;
 
   const cnButton = cn(
     className,
     styles.button,
     fullWidth && styles.fullWidth,
     centered && styles.center,
-    slim && styles.slim,
-    variant === 'primary' && styles.primary,
+    primary && styles.primary,
+    disabled && styles.disabled,
     variant === 'positive' && styles.green,
     variant === 'negative' && styles.red,
   );
+
+  const handleClick = () => {
+    if (!disabled && onClick) {
+      onClick();
+    }
+  };
 
   const content = (
     <>
@@ -72,16 +99,16 @@ const Button: React.FC<ButtonProps> = (props) => {
     </>
   );
 
-  if (href) {
+  if (href && !disabled) {
     return (
-      <a href={href} onClick={onClick} className={cnButton}>
+      <a href={href} onClick={handleClick} className={cnButton}>
         {content}
       </a>
     );
   }
 
   return (
-    <div onClick={onClick} className={cnButton}>
+    <div onClick={handleClick} className={cnButton}>
       {content}
     </div>
   );
