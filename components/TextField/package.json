@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/textfield",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Textfield input component",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
@@ -25,7 +25,7 @@
     "build": "klarb"
   },
   "dependencies": {
-    "@klarheit/input-layout": "0.1.1",
+    "@klarheit/input-layout": "0.1.2",
     "classnames": "~2.3.1"
   },
   "devDependencies": {

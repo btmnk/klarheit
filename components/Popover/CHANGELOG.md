@@ -1,6 +1,13 @@
 # Change Log - @klarheit/popover
 
-This log was last generated on Sat, 11 Dec 2021 20:59:34 GMT and should not be manually modified.
+This log was last generated on Sat, 11 Dec 2021 22:54:00 GMT and should not be manually modified.
+
+## 0.1.2
+Sat, 11 Dec 2021 22:54:00 GMT
+
+### Patches
+
+- Make sure body lock padding is only applied if scrollbar was actually there
 
 ## 0.1.1
 Sat, 11 Dec 2021 20:59:34 GMT

@@ -2,6 +2,18 @@
   "name": "@klarheit/popover",
   "entries": [
     {
+      "version": "0.1.2",
+      "tag": "@klarheit/popover_v0.1.2",
+      "date": "Sat, 11 Dec 2021 22:54:00 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Make sure body lock padding is only applied if scrollbar was actually there"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.1",
       "tag": "@klarheit/popover_v0.1.1",
       "date": "Sat, 11 Dec 2021 20:59:34 GMT",

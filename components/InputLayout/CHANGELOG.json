@@ -2,6 +2,18 @@
   "name": "@klarheit/input-layout",
   "entries": [
     {
+      "version": "0.1.2",
+      "tag": "@klarheit/input-layout_v0.1.2",
+      "date": "Sat, 11 Dec 2021 22:54:00 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@klarheit/popover\" from `0.1.1` to `0.1.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.1",
       "tag": "@klarheit/input-layout_v0.1.1",
       "date": "Sat, 11 Dec 2021 20:59:34 GMT",
