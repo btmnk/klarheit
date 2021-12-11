@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@klarheit/popover",
+      "comment": "Adds exports for the orientation interfaces",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@klarheit/popover"
+}
