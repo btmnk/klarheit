@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Update and build
+      - name: Install and build
         run: |
-          node common/scripts/install-run-rush.js update
+          node common/scripts/install-run-rush.js install
           node common/scripts/install-run-rush.js build
