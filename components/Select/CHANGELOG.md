@@ -1,6 +1,11 @@
 # Change Log - @klarheit/select
 
-This log was last generated on Sat, 11 Dec 2021 22:54:00 GMT and should not be manually modified.
+This log was last generated on Sat, 11 Dec 2021 23:14:41 GMT and should not be manually modified.
+
+## 0.1.3
+Sat, 11 Dec 2021 23:14:41 GMT
+
+_Version update only_
 
 ## 0.1.2
 Sat, 11 Dec 2021 22:54:00 GMT

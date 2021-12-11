@@ -1,6 +1,6 @@
 {
   "name": "@klarheit/popover",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Popover component to render html with a react portal and viewport awareness",
   "license": "MIT",
   "author": "Rico Lafayette Maier <contact@bitmonk.de>",
