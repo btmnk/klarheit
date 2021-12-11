@@ -15,7 +15,7 @@
     "deploy-storybook": "npm run build-storybook && node deploy-storybook.js"
   },
   "devDependencies": {
-    "@klarheit/theme-default": "~0.0.5",
+    "@klarheit/theme-default": "~0.0.6",
     "@babel/core": "~7.15.8",
     "@storybook/addon-actions": "~6.4.7",
     "@storybook/addon-essentials": "~6.4.7",

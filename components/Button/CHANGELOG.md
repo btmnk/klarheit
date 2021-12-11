@@ -1,6 +1,13 @@
 # Change Log - @klarheit/button
 
-This log was last generated on Fri, 10 Dec 2021 23:51:42 GMT and should not be manually modified.
+This log was last generated on Sat, 11 Dec 2021 18:10:18 GMT and should not be manually modified.
+
+## 0.1.0
+Sat, 11 Dec 2021 18:10:18 GMT
+
+### Minor changes
+
+- Added disabled prop and improved primary, positive and negative variant styling
 
 ## 0.0.6
 Fri, 10 Dec 2021 23:51:42 GMT

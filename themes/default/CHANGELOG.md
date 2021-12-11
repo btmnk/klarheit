@@ -1,6 +1,13 @@
 # Change Log - @klarheit/theme-default
 
-This log was last generated on Fri, 10 Dec 2021 23:51:42 GMT and should not be manually modified.
+This log was last generated on Sat, 11 Dec 2021 18:10:18 GMT and should not be manually modified.
+
+## 0.0.6
+Sat, 11 Dec 2021 18:10:18 GMT
+
+### Patches
+
+- Improved interactiveRed colors to properly distinguish between base, hover and active
 
 ## 0.0.5
 Fri, 10 Dec 2021 23:51:42 GMT

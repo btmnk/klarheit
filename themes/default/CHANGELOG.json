@@ -2,6 +2,18 @@
   "name": "@klarheit/theme-default",
   "entries": [
     {
+      "version": "0.0.6",
+      "tag": "@klarheit/theme-default_v0.0.6",
+      "date": "Sat, 11 Dec 2021 18:10:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Improved interactiveRed colors to properly distinguish between base, hover and active"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.0.5",
       "tag": "@klarheit/theme-default_v0.0.5",
       "date": "Fri, 10 Dec 2021 23:51:42 GMT",
