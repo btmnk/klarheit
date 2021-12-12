@@ -1,6 +1,13 @@
 # Change Log - @klarheit/button
 
-This log was last generated on Sat, 11 Dec 2021 18:10:18 GMT and should not be manually modified.
+This log was last generated on Sun, 12 Dec 2021 00:16:51 GMT and should not be manually modified.
+
+## 0.1.1
+Sun, 12 Dec 2021 00:16:51 GMT
+
+### Patches
+
+- Use theme base height for interactive elements
 
 ## 0.1.0
 Sat, 11 Dec 2021 18:10:18 GMT

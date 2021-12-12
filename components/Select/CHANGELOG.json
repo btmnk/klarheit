@@ -2,6 +2,18 @@
   "name": "@klarheit/select",
   "entries": [
     {
+      "version": "0.1.4",
+      "tag": "@klarheit/select_v0.1.4",
+      "date": "Sun, 12 Dec 2021 00:16:51 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@klarheit/input-layout\" from `0.1.3` to `0.1.4`"
+          }
+        ]
+      }
+    },
+    {
       "version": "0.1.3",
       "tag": "@klarheit/select_v0.1.3",
       "date": "Sat, 11 Dec 2021 23:14:41 GMT",
