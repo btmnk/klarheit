@@ -1,6 +1,5 @@
 :root {
-  --kl-baseInputHeight: 42px;
-  --kl-baseInputMinHeight: 42px;
+  --kl-baseInputMinHeight: var(--defaultInteractiveHeight);
 
   --kl-baseInputWidth: auto;
   --kl-baseInputMinWidth: auto;

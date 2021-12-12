@@ -1,4 +1,4 @@
 :root {
-  --kl-buttonHeight: 46px;
+  --kl-buttonHeight: var(--defaultInteractiveHeight);
   --kl-buttonWidth: min-content;
 }
